@@ -18,7 +18,7 @@ const VideoCard = ({ author, title, views, image }: VideoCardProps) => {
       <div className="relative">
         <Image
           src={image}
-          className="rounded-xl"
+          className="rounded-xl min-w-[280px]"
           alt="image"
           height={200}
           width={350}
