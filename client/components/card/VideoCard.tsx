@@ -15,7 +15,18 @@ type VideoCardProps = {
 const VideoCard = ({ author, title, views, image }: VideoCardProps) => {
   return (
     <div className="flex flex-col gap-2">
-        <Image src={image} className="rounded-xl" alt="image" height={200} width={350} />
+      <div className="relative">
+        <Image
+          src={image}
+          className="rounded-xl"
+          alt="image"
+          height={200}
+          width={350}
+        />
+        <div className="bg-black bg-opacity-80 text-white absolute bottom-1 right-1 p-1 rounded-md text-xs">
+          15:30
+        </div>
+      </div>
 
       <div className="flex gap-4 items-start">
         <Image
