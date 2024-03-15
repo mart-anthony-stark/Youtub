@@ -26,10 +26,10 @@ const VideoCard = ({ author, title, views, image }: VideoCardProps) => {
           width={50}
         />
         <div className="flex items-start flex-col">
-          <h3 className="text-bold text-lg">{title}</h3>
+          <h3 className="text-bold text-lg dark:text-white">{title}</h3>
 
-          <p className="text-xs text-gray-600">{author.name}</p>
-          <p className="text-xs text-gray-600">{views} views 2 years ago</p>
+          <p className="text-xs text-yt-gray">{author.name}</p>
+          <p className="text-xs text-yt-gray">{views} views 2 years ago</p>
         </div>
       </div>
     </div>
