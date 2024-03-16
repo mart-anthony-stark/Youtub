@@ -11,7 +11,7 @@ const config: Config = {
     extend: {
       colors: {
         "yt-black": "#0F0F0F",
-        "yt-gray": "#9B9A9A",
+        "yt-gray": "#606060",
         "yt-white": "#FEFEFF",
         "yt-red": "#FF0000"
       },

@@ -9,7 +9,7 @@ export default function Home() {
   } as Author;
 
   return (
-    <main className="flex min-h-screen bg-gray-50 dark:bg-yt-black flex-col items-center">
+    <main className="flex min-h-screen bg-white dark:bg-yt-black flex-col items-center">
       <Navbar />
 
       <VideoCard

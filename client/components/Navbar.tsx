@@ -10,7 +10,7 @@ import { PiMicrophoneFill } from "react-icons/pi";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-between items-center px-8 py-2  w-full">
+    <nav className="bg-white sticky mt-0 top-0 z-50 flex justify-between items-center px-4 py-2 w-full">
       <div className="flex items-center gap-8">
         <IoIosMenu size={30} className="cursor-pointer" />
 
@@ -35,10 +35,10 @@ const Navbar = () => {
           alt="user"
           height={30}
           width={30}
-          className="rounded-full"
+          className="rounded-full mx-2"
         />
       </div>
-    </div>
+    </nav>
   );
 };
 
