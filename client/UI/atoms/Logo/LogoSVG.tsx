@@ -1,6 +1,4 @@
-import React from 'react'
-
-const YTLogo = () => {
+const LogoSVG = () => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" id="yt-logo-updated-svg_yt3" className="external-icon" viewBox="0 0 90 20" focusable="false" style={{pointerEvents:'none', display:'inherit', width:'100%', height:'100%'}}>
   <svg id="yt-logo-updated_yt3" viewBox="0 0 90 20" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
@@ -24,4 +22,4 @@ const YTLogo = () => {
   )
 }
 
-export default YTLogo
+export default LogoSVG
