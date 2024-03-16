@@ -26,16 +26,14 @@ const Navbar = () => {
       {/* SEARCHBAR HERE */}
 
       <div className="flex items-center gap-5">
-        <div className="md:hidden flex gap-5">
-          <GoSearch size={24} strokeWidth={0.1} />
-          <PiMicrophoneFill size={24} strokeWidth={0.1} />
-        </div>
 
-        <div className="hover:bg-gray-200 rounded-full cursor-pointer p-1">
+        <GoSearch className="md:hidden" size={24} strokeWidth={0.1} />
+        <PiMicrophoneFill className="hidden sm:block md:hidden" size={24} strokeWidth={0.1} />
+        <div className="hidden sm:block hover:bg-gray-200 rounded-full cursor-pointer p-1">
           <RiVideoAddLine size={24} strokeWidth={0.1} />
         </div>
 
-        <div className="hover:bg-gray-200 rounded-full cursor-pointer p-1">
+        <div className="hidden sm:block hover:bg-gray-200 rounded-full cursor-pointer p-1">
           <IconBadge
             icon={<IoIosNotificationsOutline size={28} />}
             value={10}
