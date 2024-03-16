@@ -1,6 +1,6 @@
 "use client";
 
-import { IoIosMenu, IoIosNotificationsOutline } from "react-icons/io";
+import { IoIosNotificationsOutline } from "react-icons/io";
 import { RiVideoAddLine } from "react-icons/ri";
 import IconBadge from "./IconBadge";
 import YTLogo from "./YTLogo";
