@@ -1,4 +1,4 @@
-import Navbar from "@/UI/components/Navbar";
+import Navbar from "@/components/molecules/Navbar";
 
 export default function Home() {
 
