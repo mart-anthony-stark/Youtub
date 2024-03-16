@@ -7,16 +7,19 @@ import YTLogo from "./YTLogo";
 import Image from "next/image";
 import { GoSearch } from "react-icons/go";
 import { PiMicrophoneFill } from "react-icons/pi";
+import { VscMenu } from "react-icons/vsc";
 
 const Navbar = () => {
   return (
     <nav className="bg-white sticky mt-0 top-0 z-50 flex justify-between items-center px-4 py-2 w-full">
-      <div className="flex items-center gap-8">
-        <IoIosMenu size={30} className="cursor-pointer" />
+      <div className="flex items-center gap-5">
+        <div className="hover:bg-gray-200 rounded-full p-2 cursor-pointer">
+          <VscMenu size={20} />
+        </div>
 
-        <div className="flex gap-1 items-start h-[20px] cursor-pointer">
+        <div className="flex gap-1 items-start h-5 cursor-pointer">
           <YTLogo />
-          <div className="text-gray-600 -mt-1 text-xs">PH</div>
+          <div className="text-yt-gray -mt-2 text-[0.6rem]">PH</div>
         </div>
       </div>
 
@@ -28,8 +31,17 @@ const Navbar = () => {
           <PiMicrophoneFill size={24} strokeWidth={0.1} />
         </div>
 
-        <RiVideoAddLine size={24} strokeWidth={0.1} />
-        <IconBadge icon={<IoIosNotificationsOutline size={28} />} value={10} />
+        <div className="hover:bg-gray-200 rounded-full cursor-pointer p-1">
+          <RiVideoAddLine size={24} strokeWidth={0.1} />
+        </div>
+
+        <div className="hover:bg-gray-200 rounded-full cursor-pointer p-1">
+          <IconBadge
+            icon={<IoIosNotificationsOutline size={28} />}
+            value={10}
+          />
+        </div>
+
         <Image
           src="https://yt3.ggpht.com/SKtlWY3vGARq6QT0jtCFRUzH2hNj7MKwA2mKPOitvXSZNlaODrPSDmo5mh_0grN8kgzhjco1=s88-c-k-c0x00ffffff-no-rj"
           alt="user"
