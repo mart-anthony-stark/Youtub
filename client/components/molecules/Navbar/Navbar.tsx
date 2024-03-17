@@ -6,8 +6,8 @@ import Image from "next/image";
 import { GoSearch } from "react-icons/go";
 import { PiMicrophoneFill } from "react-icons/pi";
 import { VscMenu } from "react-icons/vsc";
-import Button from "../atoms/Button/Button";
-import Logo from "../atoms/Logo/Logo";
+import Button from "../../atoms/Button/Button";
+import Logo from "../../atoms/Logo/Logo";
 
 const Navbar = () => {
   return (
