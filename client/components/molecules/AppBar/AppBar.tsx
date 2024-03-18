@@ -8,7 +8,7 @@ import { PiMicrophoneFill } from "react-icons/pi";
 import { VscMenu } from "react-icons/vsc";
 import Button from "../../atoms/Button/Button";
 import Logo from "../../atoms/Logo/Logo";
-import SearchBar from "../searchbar/SearchBar";
+import SearchBar from "../SearchBar/SearchBar";
 
 const AppBar = () => {
   return (

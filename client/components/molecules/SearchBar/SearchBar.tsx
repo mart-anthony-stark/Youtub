@@ -1,18 +1,8 @@
 "use client";
 import Button from "@/components/atoms/Button/Button";
-import React, { ChangeEventHandler } from "react";
-import { useState, ChangeEvent } from "react";
 import { IoIosSearch } from "react-icons/io";
-import { PiMicrophoneFill } from "react-icons/pi";
 
-export type SearchBarProps = {
-  onSearch?: (value: string) => void;
-};
-
-const SearchBar = (props: SearchBarProps) => {
-  const { onSearch } = props;
-  const [value, setValue] = useState("Search");
-
+const SearchBar = () => {
   return (
     <div className="flex h-10 flex-1 relative w-1/3 text-gray-600 rounded-full">
       <input
