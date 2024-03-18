@@ -7,11 +7,11 @@ type VideoCardProps = {
 
 const VideoCard = ({ details }: VideoCardProps) => {
   return (
-    <div className="flex flex-col gap-2">
-      <div className="relative">
+    <div className="flex flex-col gap-2 cursor-pointer w-full">
+      <div className="relative w-fit">
         <Image
           src={details.thumbnail}
-          className="rounded-xl min-w-[280px]"
+          className="rounded-xl min-w-[280px] w-full"
           alt="image"
           height={200}
           width={350}
@@ -31,7 +31,7 @@ const VideoCard = ({ details }: VideoCardProps) => {
           height={50}
           width={50}
         />
-        
+
         <div className="flex items-start flex-col">
           <h3 className="text-bold text-lg dark:text-white">{details.title}</h3>
 

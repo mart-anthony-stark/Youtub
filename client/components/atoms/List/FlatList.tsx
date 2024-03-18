@@ -1,16 +1,16 @@
 import { FC, ReactNode } from "react";
 
-type Props = {
-  data: any[];
-  keyExtractor: (item: any) => string;
-  RenderItem: (item: any) => ReactNode;
+type FlatListProps<T> = {
+  data: T[];
+  keyExtractor: (item: T) => string;
+  RenderItem: (item: T) => ReactNode;
 };
 
-const FlatList: FC<Props> = ({
+const FlatList = <T,>({
   data,
   keyExtractor,
   RenderItem,
-}): JSX.Element => {
+}: FlatListProps<T>): JSX.Element => {
   return (
     <>
       {data?.map((item: any) => (
