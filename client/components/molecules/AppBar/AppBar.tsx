@@ -14,7 +14,7 @@ const AppBar = () => {
   return (
     <nav className="bg-white sticky mt-0 top-0 z-50 flex justify-between items-center px-4 py-2 w-full">
       <div className="flex items-center gap-5">
-        <Button>
+        <Button className="hidden sm:block">
           <VscMenu size={20} />
         </Button>
 
@@ -22,7 +22,7 @@ const AppBar = () => {
       </div>
 
       {/* SEARCHBAR HERE */}
-      <div className="w-1/3 flex gap-4 ">
+      <div className="w-1/3 gap-4 hidden md:flex">
         <SearchBar />
 
         <Button className="bg-gray-200 self-center">
