@@ -1,5 +1,5 @@
 import VideoCard from "@/components/molecules/Card/VideoCard";
-import Navbar from "@/components/molecules/AppBar/AppBar";
+import AppBar from "@/components/molecules/AppBar/AppBar";
 import { videos } from "@/lib/api/data";
 
 export default function Home() {
@@ -7,7 +7,7 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen bg-white dark:bg-yt-black flex-col items-center">
-      <Navbar />
+      <AppBar />
       <VideoCard details={video} />
     </main>
   );
