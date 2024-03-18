@@ -1,4 +1,4 @@
-import { FC, ReactNode } from "react";
+import { ReactNode } from "react";
 
 type FlatListProps<T> = {
   data: T[];
@@ -13,7 +13,7 @@ const FlatList = <T,>({
 }: FlatListProps<T>): JSX.Element => {
   return (
     <>
-      {data?.map((item: any) => (
+      {data?.map((item: T) => (
         <RenderItem key={keyExtractor(item)} {...item} />
       ))}
     </>

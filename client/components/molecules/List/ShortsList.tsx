@@ -12,7 +12,7 @@ const ShortsList = () => {
       </div>
 
       <div
-        className="flex gap-4 overflow-x-auto w-full mb-9"
+        className="flex pl-4 gap-4 overflow-x-auto w-full mb-9"
         style={{ scrollbarWidth: "none" }}
       >
         <FlatList
