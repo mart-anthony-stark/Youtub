@@ -10,13 +10,11 @@ const FlatList = <T,>({
   data,
   keyExtractor,
   RenderItem,
-}: FlatListProps<T>): JSX.Element => {
+}: FlatListProps<T>) => {
   return (
-    <>
-      {data?.map((item: T) => (
+      data?.map((item: T) => (
         <RenderItem key={keyExtractor(item)} {...item} />
-      ))}
-    </>
+      ))
   );
 };
 
