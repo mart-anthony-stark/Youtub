@@ -3,7 +3,7 @@
 import ShortsCard from "../Card/ShortsCard";
 import { videos } from "@/lib/api/data";
 import { SiYoutubeshorts } from "react-icons/si";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { groupBy } from "@/lib/utils";
 import { Video } from "@/lib/types/Video.type";
 import Button from "@/components/atoms/Button/Button";
@@ -11,32 +11,32 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 const ShortsList = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [items, setItems] = useState<Video[][]>([[]]);
+  const [items, setItems] = useState<Video[][]>([videos]);
 
-  useEffect(() => {
+  useEffect(()=>{
     const result = groupBy(videos, 8);
     const shownItems = isOpen ? result : [result[0]];
     setItems(shownItems);
-  }, [isOpen]);
+  }, [isOpen])
 
   const handleShowMore = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <>
+    <div className="relative overflow-hidden w-[90vw] laptop:w-full">
       <div className="w-full flex gap-2 items-center p-4">
         <SiYoutubeshorts size={30} color="red" />
         <h2 className="text-xl text-yt-black font-medium">Shorts</h2>
       </div>
 
       {/* LIST */}
-      <div className="w-full overflow-hidden pl-4">
+      <div className="max-w-[1080px] w-full overflow-hidden pl-4">
         {items.length !== 0 &&
           items.map((videoGroup, index) => (
             <div
               key={`videoGroup-${index}`}
-              className="flex gap-4 overflow-x-auto w-full mb-9"
+              className="h-full flex gap-4 overflow-x-auto w-full mb-9"
               style={{ scrollbarWidth: "none" }}
             >
               {videoGroup.map((video) => (
@@ -57,7 +57,7 @@ const ShortsList = () => {
         </Button>
         <hr className="flex-1" />
       </div>
-    </>
+    </div>
   );
 };
 

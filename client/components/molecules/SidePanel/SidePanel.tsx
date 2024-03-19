@@ -26,11 +26,6 @@ import Image from "next/image";
 import { Channel } from "@/lib/types/Video.type";
 import FlatList from "@/components/atoms/List/FlatList";
 
-type SidePanelProps = {
-  side: string[];
-  active: string;
-};
-
 const channels: Channel[] = [
   {
     name: "Jocelyn Necio",
@@ -38,30 +33,31 @@ const channels: Channel[] = [
   },
   {
     name: "Anthony Stark",
-    profile_img: "https://github.com/mart-anthony-stark/CV-Vanilla-JS-SPA/blob/main/src/assets/images/mart-white-bg.png?raw=true"
+    profile_img:
+      "https://github.com/mart-anthony-stark/CV-Vanilla-JS-SPA/blob/main/src/assets/images/mart-white-bg.png?raw=true",
   },
   {
     name: "Justin Viber",
-    profile_img: 'https://avatars.githubusercontent.com/u/83799855?v=4.png'
+    profile_img: "https://avatars.githubusercontent.com/u/83799855?v=4.png",
   },
   {
     name: "JR Siaboc",
-    profile_img: 'https://avatars.githubusercontent.com/u/160460651?v=4'
+    profile_img: "https://avatars.githubusercontent.com/u/160460651?v=4",
   },
   {
     name: "LeanNotFound",
-    profile_img: 'https://avatars.githubusercontent.com/u/113871679?v=4.png'
+    profile_img: "https://avatars.githubusercontent.com/u/113871679?v=4.png",
   },
   {
     name: "JepJep",
-    profile_img: "https://avatars.githubusercontent.com/u/90635364?v=4"
-  }
+    profile_img: "https://avatars.githubusercontent.com/u/90635364?v=4",
+  },
 ];
 
-const SidePanel = ({ side, active }: SidePanelProps) => {
+const SidePanel = () => {
   return (
     <div
-      className="fixed top-[60px] z-50 scroll flex flex-col overflow-y-auto w-[14rem] px-2 bg-white"
+      className="hidden w-16 fixed top-[60px] left-0 z-50 scroll md:flex flex-col overflow-y-auto xl:w-60 px-2 bg-white"
       style={{ height: "calc(100vh - 60px)" }}
     >
       <MenuButton text="Home" Icon={<GoHomeFill size={24} />} active />
@@ -88,19 +84,27 @@ const SidePanel = ({ side, active }: SidePanelProps) => {
 
       <p className="font-bold mb-2 pl-3 select-none mt-3">Subscriptions</p>
 
-      {<FlatList data={channels} keyExtractor={(item)=>item.name} RenderItem={(channel)=><MenuButton
-          key={channel.name}
-          text={channel.name}
-          Icon={
-            <Image
-              src={channel.profile_img}
-              width={30}
-              height={30}
-              className="rounded-full"
-              alt={channel.name}
+      {
+        <FlatList
+          data={channels}
+          keyExtractor={(item) => item.name}
+          RenderItem={(channel) => (
+            <MenuButton
+              key={channel.name}
+              text={channel.name}
+              Icon={
+                <Image
+                  src={channel.profile_img}
+                  width={30}
+                  height={30}
+                  className="rounded-full"
+                  alt={channel.name}
+                />
+              }
             />
-          }
-        />}/>}
+          )}
+        />
+      }
 
       <hr className="mt-4" />
 

@@ -12,7 +12,7 @@ import SearchBar from "../SearchBar/SearchBar";
 
 const AppBar = () => {
   return (
-    <nav className="bg-white sticky mt-0 top-0 z-50 flex justify-between items-center px-4 py-2 w-full">
+    <nav className="h-[60px] bg-white sticky mt-0 top-0 z-50 flex justify-between items-center px-4 py-2 w-full">
       <div className="flex items-center gap-5">
         <Button className="hidden sm:block">
           <VscMenu size={20} />
