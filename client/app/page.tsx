@@ -10,9 +10,9 @@ export default function Home() {
     <main className="flex min-h-screen bg-white dark:bg-yt-black flex-col items-center">
       <AppBar />
       <div>
-        <SidePanel side={["Home", "Shorts", ""]} active={"Home"} />
+        <SidePanel />
 
-        <div className="ml-60 px-2 flex flex-col flex-grow">
+        <div className="ml-0 sm:ml-24 xl:ml-60 sm:px-2 flex flex-col flex-grow">
           <CategoryList />
           <VideoList />
           <ShortsList />

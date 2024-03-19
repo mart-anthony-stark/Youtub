@@ -16,10 +16,6 @@ const cat = [
   "AI",
   "Machine Learning",
   "JavaScript",
-  "TypeScript",
-  "Electronics",
-  "Physics",
-  "Thrillers"
 ];
 
 const CategoryList = ({
