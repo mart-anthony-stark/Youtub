@@ -12,7 +12,7 @@ export default function Home() {
       <div>
         <SidePanel />
 
-        <div className="pl-0 md:pl-16 xl:pl-60 sm:px-2 flex flex-col flex-grow">
+        <div className="pl-0 md:pl-16 laptop:pl-0 xl:pl-60 sm:px-2 flex flex-col flex-grow">
           <CategoryList />
           <VideoList />
           <ShortsList />
