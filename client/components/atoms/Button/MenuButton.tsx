@@ -12,10 +12,10 @@ const MenuButton = ({ active, text, Icon }: MenuButtonProps) => (
       active
         ? "bg-gray-200 text-black font-bold hover:bg-gray-300 hover:text-bold"
         : "color-white "
-    } rounded-md text-sm font-medium text-nowrap gap-7 flex p-1 pl-5 items-center justify-start w-full outline-none`}
+    } select-none rounded-md text-sm text-nowrap grid grid-cols-[50px_1fr] pl-3 items-center justify-start w-full outline-none`}
   >
     {Icon}
-    <p>{text}</p>
+    <p className="w-28 text-start text-ellipsis overflow-hidden">{text}</p>
   </Button>
 );
 

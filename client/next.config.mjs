@@ -13,6 +13,14 @@ const nextConfig = {
           {
             protocol: 'https',
             hostname: 'yt3.ggpht.com'
+          },
+          {
+            protocol: 'https',
+            hostname: 'avatars.githubusercontent.com'
+          },
+          {
+            protocol: 'https',
+            hostname: 'github.com'
           }
         ],
       },
