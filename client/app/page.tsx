@@ -1,4 +1,3 @@
-import VideoCard from "@/components/molecules/Card/VideoCard";
 import AppBar from "@/components/molecules/AppBar/AppBar";
 import SidePanel from "@/components/molecules/SidePanel/SidePanel";
 import ShortsList from "@/components/molecules/List/ShortsList";
@@ -12,7 +11,7 @@ export default function Home() {
       <div>
         <SidePanel />
 
-        <div className="pl-0 md:pl-16 laptop:pl-0 xl:pl-60 sm:px-2 flex flex-col flex-grow">
+        <div className="pl-0 sm:px-2 md:pl-16 laptop:pl-0 xl:pl-60 flex flex-col flex-grow">
           <CategoryList />
           <VideoList />
           <ShortsList />

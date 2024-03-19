@@ -14,7 +14,7 @@ const config: Config = {
         "yt-black": "#0F0F0F",
         "yt-gray": "#606060",
         "yt-white": "#FEFEFF",
-        "yt-red": "#FF0000"
+        "yt-red": "#FF0000",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -22,9 +22,9 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       screens: {
-        'laptop': '1097px',
-        'tablet': '850px'
-      }
+        laptop: "1279px",
+        tablet: "850px",
+      },
     },
   },
   plugins: [],
