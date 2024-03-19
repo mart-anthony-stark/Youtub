@@ -30,6 +30,7 @@ const ShortsList = () => {
         <h2 className="text-xl text-yt-black font-medium">Shorts</h2>
       </div>
 
+      {/* LIST */}
       <div className="w-full overflow-hidden pl-4">
         {items.length !== 0 &&
           items.map((videoGroup, index) => (
