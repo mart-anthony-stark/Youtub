@@ -24,14 +24,14 @@ const ShortsList = () => {
   };
 
   return (
-    <div className="relative overflow-hidden w-[90vw] laptop:w-full">
-      <div className="w-full flex gap-2 items-center p-4">
+    <div className="relative overflow-hidden w-[90vw] laptop:w-full pl-8">
+      <div className="w-full flex gap-2 items-center py-4">
         <SiYoutubeshorts size={30} color="red" />
         <h2 className="text-xl text-yt-black font-medium">Shorts</h2>
       </div>
 
       {/* LIST */}
-      <div className="max-w-[1080px] w-full overflow-hidden pl-4">
+      <div className="max-w-[1080px] w-full overflow-hidden">
         {items.length !== 0 &&
           items.map((videoGroup, index) => (
             <div
