@@ -10,7 +10,7 @@ type VideoCardProps = {
 const ShortsCard = ({ details }: VideoCardProps) => {
   return (
     <div className="cursor-pointer">
-      <div className="relative rounded-lg overflow-hidden h-[300px] w-[200px]">
+      <div className="relative rounded-lg overflow-hidden h-[350px] w-[200px]">
         <Image
           src={details.thumbnail}
           alt={details.title}
