@@ -1,3 +1,4 @@
+import Text from "@/components/atoms/Text/Text";
 import { Video } from "@/lib/types/Video.type";
 import Image from "next/image";
 
@@ -35,10 +36,10 @@ const VideoCard = ({ details }: VideoCardProps) => {
         <div className="flex items-start flex-col">
           <h3 className="text-bold text-lg dark:text-white">{details.title}</h3>
 
-          <p className="text-xs text-yt-gray">{details.channel?.name}</p>
-          <p className="text-xs text-yt-gray">
+          <Text className="text-yt-gray">{details.channel?.name}</Text>
+          <Text className="text-yt-gray">
             {details.views} views 2 years ago
-          </p>
+          </Text>
         </div>
       </div>
     </div>
