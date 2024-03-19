@@ -4,7 +4,7 @@ export type Channel = {
 };
 
 export type Video = {
-  id?: string;
+  id: string;
   title: string;
   description?: string;
   channel: Channel;

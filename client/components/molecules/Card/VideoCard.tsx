@@ -1,3 +1,4 @@
+import Text from "@/components/atoms/Text/Text";
 import { Video } from "@/lib/types/Video.type";
 import Image from "next/image";
 
@@ -7,11 +8,11 @@ type VideoCardProps = {
 
 const VideoCard = ({ details }: VideoCardProps) => {
   return (
-    <div className="flex flex-col gap-2">
-      <div className="relative">
+    <div className="flex flex-col gap-2 cursor-pointer w-full">
+      <div className="relative w-fit">
         <Image
           src={details.thumbnail}
-          className="rounded-xl min-w-[280px]"
+          className="rounded-xl min-w-[280px] w-full"
           alt="image"
           height={200}
           width={350}
@@ -31,14 +32,14 @@ const VideoCard = ({ details }: VideoCardProps) => {
           height={50}
           width={50}
         />
-        
+
         <div className="flex items-start flex-col">
           <h3 className="text-bold text-lg dark:text-white">{details.title}</h3>
 
-          <p className="text-xs text-yt-gray">{details.channel?.name}</p>
-          <p className="text-xs text-yt-gray">
+          <Text className="text-yt-gray">{details.channel?.name}</Text>
+          <Text className="text-yt-gray">
             {details.views} views 2 years ago
-          </p>
+          </Text>
         </div>
       </div>
     </div>
