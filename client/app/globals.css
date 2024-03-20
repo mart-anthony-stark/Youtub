@@ -15,5 +15,8 @@
     @apply w-1;
 }
 .scroll::-webkit-scrollbar-thumb{
-    @apply bg-gray-500;
+    @apply bg-gray-500/0;
+}
+.scroll:hover::-webkit-scrollbar-thumb{
+    @apply bg-gray-500/100;
 }

@@ -14,7 +14,7 @@ const ShortsList = () => {
   const [items, setItems] = useState<Video[][]>([videos]);
 
   useEffect(()=>{
-    const result = groupBy(videos, 8);
+    const result = groupBy(videos, 6);
     const shownItems = isOpen ? result : [result[0]];
     setItems(shownItems);
   }, [isOpen])
@@ -24,7 +24,7 @@ const ShortsList = () => {
   };
 
   return (
-    <div className="relative overflow-hidden w-[90vw] laptop:w-full pl-8">
+    <div className="relative overflow-hidden w-[90vw] laptop:w-auto xl:pl-8">
       <div className="w-full flex gap-2 items-center py-4">
         <SiYoutubeshorts size={30} color="red" />
         <h2 className="text-xl text-yt-black font-medium">Shorts</h2>
