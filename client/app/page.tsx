@@ -6,7 +6,7 @@ import VideoList from "@/components/molecules/List/VideoList";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen bg-white dark:bg-yt-black flex-col items-center">
+    <main className="flex min-h-screen bg-white dark:bg-yt-black flex-col">
       <AppBar />
       <div>
         <SidePanel />

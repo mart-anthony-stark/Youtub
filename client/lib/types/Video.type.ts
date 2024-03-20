@@ -5,10 +5,12 @@ export type Channel = {
 
 export type Video = {
   id: string;
+  slug: string;
   title: string;
   description?: string;
   channel: Channel;
   duration?: number;
   views: string;
   thumbnail: string;
+  path: string;
 };
