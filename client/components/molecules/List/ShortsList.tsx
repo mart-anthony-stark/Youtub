@@ -50,7 +50,7 @@ const ShortsList = () => {
         <hr className="flex-1 " />
         <Button
           onClick={handleShowMore}
-          className="px-40 border-gray-200 border flex gap-2 font-small items-center outline-none"
+          className="px-6 sm:px-32 border-gray-200 border flex gap-2 font-small items-center outline-none"
         >
           Show {isOpen ? "less" : "more"}{" "}
           {isOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
