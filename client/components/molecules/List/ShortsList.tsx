@@ -13,11 +13,11 @@ const ShortsList = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [items, setItems] = useState<Video[][]>([videos]);
 
-  useEffect(()=>{
+  useEffect(() => {
     const result = groupBy(videos, 6);
     const shownItems = isOpen ? result : [result[0]];
     setItems(shownItems);
-  }, [isOpen])
+  }, [isOpen]);
 
   const handleShowMore = () => {
     setIsOpen(!isOpen);
@@ -50,7 +50,7 @@ const ShortsList = () => {
         <hr className="flex-1 " />
         <Button
           onClick={handleShowMore}
-          className="px-20 border-gray-200 border flex gap-2 font-medium items-center"
+          className="px-6 sm:px-32 border-gray-200 border flex gap-2 font-small items-center outline-none"
         >
           Show {isOpen ? "less" : "more"}{" "}
           {isOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}

@@ -8,9 +8,9 @@ import MenuButton from "@/components/atoms/Button/MenuButton";
 import VideoCard from "@/components/molecules/Card/VideoCard";
 
 type ChannelPageProps = {
-  text: string;
+  params: { handle: string };
 };
-const ChannelPage = ({ text }: ChannelPageProps) => {
+const ChannelPage = ({ params }: ChannelPageProps) => {
   return (
     <div className="flex flex-row font-semibold items-center justify-center gap-4">
       <div className="flex flex-row">
