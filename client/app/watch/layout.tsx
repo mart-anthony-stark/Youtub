@@ -1,4 +1,4 @@
-import AppBar from "@/components/molecules/AppBar/AppBar";
+import MainTemplate from "@/components/templates/MainTemplate";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,13 +12,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <main className="flex min-h-screen bg-white dark:bg-yt-black flex-col">
-    <AppBar />
-    <div>
-      <div className="sm:px-6 flex flex-col flex-grow pt-8">
-        {children}
-      </div>
-    </div>
-  </main>
+    <MainTemplate>
+      {children}
+    </MainTemplate>
   );
 }

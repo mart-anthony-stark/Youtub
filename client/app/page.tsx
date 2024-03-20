@@ -1,8 +1,8 @@
 import AppBar from "@/components/molecules/AppBar/AppBar";
-import SidePanel from "@/components/molecules/SidePanel/SidePanel";
-import ShortsList from "@/components/molecules/List/ShortsList";
+import SidePanel from "@/components/organisms/SidePanel/SidePanel";
 import CategoryList from "@/components/molecules/List/CategoryList";
 import VideoList from "@/components/molecules/List/VideoList";
+import Shorts from "@/components/organisms/Shorts/Shorts";
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
           </div>
           <div className="pt-12">
             <VideoList />
-            <ShortsList />
+            <Shorts />
           </div>
         </div>
       </div>
