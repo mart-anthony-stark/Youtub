@@ -2,13 +2,28 @@ import Button from "@/components/atoms/Button/Button";
 import React from "react";
 
 type CategoryListProps = {
-  categories: string[];
-  active: string;
+  categories?: string[];
+  active?: string;
 };
 
-const CategoryList = ({ categories, active }: CategoryListProps) => {
+const cat = [
+  "All",
+  "Cyber Security",
+  "Computer Science",
+  "Shorts",
+  "Music",
+  "Anime",
+  "AI",
+  "Machine Learning",
+  "JavaScript",
+];
+
+const CategoryList = ({
+  categories = cat,
+  active = "all",
+}: CategoryListProps) => {
   return (
-    <div className="flex gap-4 mb-2 overflow-hidden w-full">
+    <div className="flex gap-3 pb-3 overflow-hidden w-full fixed top-[60px] z-20 bg-white px-4 md:px-2 xl:px-8">
       {categories.map((category) => (
         <Button
           key={category}
@@ -16,7 +31,7 @@ const CategoryList = ({ categories, active }: CategoryListProps) => {
             active.toLowerCase() === category.toLowerCase()
               ? "bg-yt-black text-white hover:bg-yt-black hover:text-white"
               : "bg-gray-200"
-          } rounded-md text-sm px-2 py-1 font-medium w-fit text-nowrap`}
+          } rounded-md text-sm px-2 font-semibold w-fit text-nowrap`}
         >
           {category}
         </Button>

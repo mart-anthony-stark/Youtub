@@ -1,3 +1,4 @@
+import Text from "@/components/atoms/Text/Text";
 import { Video } from "@/lib/types/Video.type";
 import Image from "next/image";
 
@@ -7,15 +8,18 @@ type VideoCardProps = {
 
 const VideoCard = ({ details }: VideoCardProps) => {
   return (
-    <div className="flex flex-col gap-2">
-      <div className="relative">
-        <Image
-          src={details.thumbnail}
-          className="rounded-xl min-w-[280px]"
-          alt="image"
-          height={200}
-          width={350}
-        />
+    <div className="flex flex-col gap-2 cursor-pointer w-full">
+      <div className="relative w-fit">
+        <div className="max-w-[600px] max-h-[400px] overflow-hidden">
+          <Image
+            src={details.thumbnail}
+            className="sm:rounded-xl min-w-[320px] sm:min-w-[200px] w-full h-auto object-contain"
+            alt="image"
+            width={600}
+            height={400}
+          />
+        </div>
+
         {details.duration && (
           <div className="bg-black bg-opacity-80 text-white absolute bottom-1 right-1 p-1 rounded-md text-xs">
             {Math.floor(details.duration / 60)}: {details.duration % 60}
@@ -31,14 +35,14 @@ const VideoCard = ({ details }: VideoCardProps) => {
           height={50}
           width={50}
         />
-        
+
         <div className="flex items-start flex-col">
           <h3 className="text-bold text-lg dark:text-white">{details.title}</h3>
 
-          <p className="text-xs text-yt-gray">{details.channel?.name}</p>
-          <p className="text-xs text-yt-gray">
+          <Text className="text-yt-gray">{details.channel?.name}</Text>
+          <Text className="text-yt-gray">
             {details.views} views 2 years ago
-          </p>
+          </Text>
         </div>
       </div>
     </div>
