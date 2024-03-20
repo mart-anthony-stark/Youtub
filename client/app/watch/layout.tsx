@@ -15,7 +15,7 @@ export default function RootLayout({
     <main className="flex min-h-screen bg-white dark:bg-yt-black flex-col">
     <AppBar />
     <div>
-      <div className="px-6 flex flex-col flex-grow pt-8">
+      <div className="sm:px-6 flex flex-col flex-grow pt-8">
         {children}
       </div>
     </div>

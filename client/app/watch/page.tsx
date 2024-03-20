@@ -3,7 +3,7 @@
 import FlatList from "@/components/atoms/List/FlatList";
 import VideoCard from "@/components/molecules/Card/VideoCard";
 import CategoryList from "@/components/molecules/List/CategoryList";
-import Player from "@/components/molecules/Player/VideoPlayer";
+import VideoPlayer from "@/components/organisms/VideoPlayer/VideoPlayer";
 import { videos } from "@/lib/api/data";
 import { Video } from "@/lib/types/Video.type";
 import { Suspense, useState } from "react";
@@ -18,7 +18,7 @@ const WatchVideo = () => {
     <div className="grid lg:grid-cols-[1fr_400px] gap-4">
       <div className="grid">
         <Suspense>
-          <Player onFetch={handleOnFetch} />
+          <VideoPlayer onFetch={handleOnFetch} />
         </Suspense>
       </div>
 

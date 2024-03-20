@@ -7,7 +7,13 @@ import { Video } from "@/lib/types/Video.type";
 import Image from "next/image";
 import { redirect, useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";
+import { BiDislike, BiLike } from "react-icons/bi";
+import { IoIosMore } from "react-icons/io";
+import { LiaDownloadSolid } from "react-icons/lia";
+import { RiShareForwardLine } from "react-icons/ri";
 import ReactPlayer from "react-player";
+import ChannelInfo from "../../molecules/ChannelInfo/ChannelInfo";
+import VideoButtons from "../../molecules/VideoButtons/VideoButtons";
 
 type VideoPlayerProps = {
   onFetch?: (data: Video) => void;
@@ -26,7 +32,7 @@ const VideoPlayer = ({ onFetch }: VideoPlayerProps) => {
     if (onFetch) {
       onFetch(result);
     }
-  }, []);
+  }, [onFetch, videoSlug]);
 
   return (
     <Suspense>
@@ -39,26 +45,19 @@ const VideoPlayer = ({ onFetch }: VideoPlayerProps) => {
           light={false}
           pip={true}
         />
-        <div className="mt-4 flex flex-col gap-3">
-          <h1 className="text-2xl font-bold">{data?.title}</h1>
+        <div className="mt-4 flex flex-col gap-3 px-2 sm:px-0">
+          <Text weight="bold" size="xl">{data?.title}</Text>
 
-          <div className="flex gap-4">
-            <Image
-              className="bg-black rounded-full"
-              src={data.channel.profile_img}
-              height={40}
-              width={40}
-              alt={data.title}
-            />
+          <div className="flex justify-between flex-wrap gap-2">
+            <div className="flex w-full md:w-max gap-2 md:gap-8">
+              <ChannelInfo channel={data?.channel} />
 
-            <div className="flex flex-col justify-between">
-              <Text size="md" weight="medium">
-                {data.channel.name}
-              </Text>
-              <Text className="text-yt-gray">{data.channel.subscribers} subscribers</Text>
+              <Button className="px-8" color="black">
+                Subscribe
+              </Button>
             </div>
 
-            <Button className="bg-yt-black text-white px-8 hover:bg-black">Subscribe</Button>
+            <VideoButtons />
           </div>
           <Text>{data?.description}</Text>
         </div>

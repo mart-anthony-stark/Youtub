@@ -3,7 +3,7 @@ import LogoSVG from "./LogoSVG";
 
 const Logo = () => {
   return (
-    <Link href="/">
+    <Link href="/" className="w-max">
       <div className="flex gap-1 items-start h-5 cursor-pointer select-none">
         <LogoSVG />
         <div className="text-yt-gray -mt-2 text-[0.6rem]">PH</div>

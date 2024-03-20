@@ -33,7 +33,7 @@ const CategoryList = ({
             active.toLowerCase() === category.toLowerCase()
               ? "bg-yt-black text-white hover:bg-yt-black hover:text-white"
               : "bg-gray-200"
-          } rounded-md text-sm px-2 font-semibold w-fit text-nowrap`}
+          } rounded-md text-sm px-2 font-semibold w-fit text-nowrap whitespace-nowrap`}
         >
           {category}
         </Button>
