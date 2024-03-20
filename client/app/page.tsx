@@ -11,10 +11,14 @@ export default function Home() {
       <div>
         <SidePanel />
 
-        <div className="pl-0 sm:px-2 md:pl-16 laptop:pl-0 xl:pl-60 flex flex-col flex-grow pt-16">
-          <CategoryList />
-          <VideoList />
-          <ShortsList />
+        <div className="pl-0 sm:px-2 md:pl-16 laptop:pl-0 xl:pl-60 flex flex-col flex-grow">
+          <div className="relative">
+            <CategoryList className="px-4 md:px-2 xl:px-8"/>
+          </div>
+          <div className="pt-12">
+            <VideoList />
+            <ShortsList />
+          </div>
         </div>
       </div>
     </main>

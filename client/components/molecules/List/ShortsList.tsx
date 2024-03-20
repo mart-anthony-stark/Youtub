@@ -3,7 +3,7 @@
 import ShortsCard from "../Card/ShortsCard";
 import { videos } from "@/lib/api/data";
 import { SiYoutubeshorts } from "react-icons/si";
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { groupBy } from "@/lib/utils";
 import { Video } from "@/lib/types/Video.type";
 import Button from "@/components/atoms/Button/Button";

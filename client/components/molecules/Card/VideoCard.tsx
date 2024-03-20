@@ -5,12 +5,20 @@ import Link from "next/link";
 
 type VideoCardProps = {
   details: Video;
+  direction?: "col" | "row";
+  className?: string;
 };
 
-const VideoCard = ({ details }: VideoCardProps) => {
+const VideoCard = ({
+  details,
+  direction = "col",
+  className,
+}: VideoCardProps) => {
   return (
     <Link href={`/watch?v=${details.slug}`}>
-      <div className="flex flex-col gap-2 cursor-pointer w-full">
+      <div
+        className={`flex flex-${direction} gap-2 cursor-pointer w-full ${className}`}
+      >
         <div className="relative w-fit">
           <div className="max-w-[600px] max-h-[400px] overflow-hidden">
             <Image
@@ -45,7 +53,8 @@ const VideoCard = ({ details }: VideoCardProps) => {
 
             <Text className="text-yt-gray">{details.channel?.name}</Text>
             <Text className="text-yt-gray">
-              {details.views} views 2 years ago
+              <span>{details.views} views</span> <span>•</span>{" "}
+              <span>2 years ago</span>
             </Text>
           </div>
         </div>

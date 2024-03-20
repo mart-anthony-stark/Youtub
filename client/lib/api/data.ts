@@ -6,6 +6,7 @@ export const videos: Video[] = [
     slug: "asdvqwasv",
     channel: {
       name: "The Net Ninja",
+      subscribers: "2M",
       profile_img:
         "https://yt3.googleusercontent.com/ytc/AIdro_nbVbd0SWK0vAJ3MTH-Q8A_JXKliSLyo4slcj9cJg=s900-c-k-c0x00ffffff-no-rj",
     },
@@ -22,6 +23,7 @@ export const videos: Video[] = [
     slug: "qkwyvbqyv",
     channel: {
       name: "Mart Anthony",
+      subscribers: "2M",
       profile_img:
         "https://yt3.googleusercontent.com/ytc/AIdro_nbVbd0SWK0vAJ3MTH-Q8A_JXKliSLyo4slcj9cJg=s900-c-k-c0x00ffffff-no-rj",
     },
@@ -38,6 +40,7 @@ export const videos: Video[] = [
     slug: "aklsiyvqbwi",
     channel: {
       name: "Mart Anthony",
+      subscribers: "2M",
       profile_img:
         "https://yt3.googleusercontent.com/ytc/AIdro_nbVbd0SWK0vAJ3MTH-Q8A_JXKliSLyo4slcj9cJg=s900-c-k-c0x00ffffff-no-rj",
     },
@@ -54,6 +57,7 @@ export const videos: Video[] = [
     slug: "akjsdycbqi",
     channel: {
       name: "Mart Anthony",
+      subscribers: "2M",
       profile_img:
         "https://yt3.googleusercontent.com/ytc/AIdro_nbVbd0SWK0vAJ3MTH-Q8A_JXKliSLyo4slcj9cJg=s900-c-k-c0x00ffffff-no-rj",
     },
@@ -70,6 +74,7 @@ export const videos: Video[] = [
     slug: "wervwno",
     channel: {
       name: "Mart Anthony",
+      subscribers: "2M",
       profile_img:
         "https://yt3.googleusercontent.com/ytc/AIdro_nbVbd0SWK0vAJ3MTH-Q8A_JXKliSLyo4slcj9cJg=s900-c-k-c0x00ffffff-no-rj",
     },
@@ -86,6 +91,7 @@ export const videos: Video[] = [
     slug: "qwechybqiu",
     channel: {
       name: "Mart Anthony",
+      subscribers: "2M",
       profile_img:
         "https://yt3.googleusercontent.com/ytc/AIdro_nbVbd0SWK0vAJ3MTH-Q8A_JXKliSLyo4slcj9cJg=s900-c-k-c0x00ffffff-no-rj",
     },
@@ -102,6 +108,7 @@ export const videos: Video[] = [
     slug: "qopwucnq",
     channel: {
       name: "Mart Anthony",
+      subscribers: "2M",
       profile_img:
         "https://yt3.googleusercontent.com/ytc/AIdro_nbVbd0SWK0vAJ3MTH-Q8A_JXKliSLyo4slcj9cJg=s900-c-k-c0x00ffffff-no-rj",
     },
@@ -118,6 +125,7 @@ export const videos: Video[] = [
     slug: "akjdcyqd",
     channel: {
       name: "Mart Anthony",
+      subscribers: "2M",
       profile_img:
         "https://yt3.googleusercontent.com/ytc/AIdro_nbVbd0SWK0vAJ3MTH-Q8A_JXKliSLyo4slcj9cJg=s900-c-k-c0x00ffffff-no-rj",
     },
@@ -134,6 +142,7 @@ export const videos: Video[] = [
     slug: "erkbthri",
     channel: {
       name: "Mart Anthony",
+      subscribers: "2M",
       profile_img:
         "https://yt3.googleusercontent.com/ytc/AIdro_nbVbd0SWK0vAJ3MTH-Q8A_JXKliSLyo4slcj9cJg=s900-c-k-c0x00ffffff-no-rj",
     },
@@ -150,6 +159,7 @@ export const videos: Video[] = [
     slug: "aksdcbso",
     channel: {
       name: "Mart Anthony",
+      subscribers: "2M",
       profile_img:
         "https://yt3.googleusercontent.com/ytc/AIdro_nbVbd0SWK0vAJ3MTH-Q8A_JXKliSLyo4slcj9cJg=s900-c-k-c0x00ffffff-no-rj",
     },
@@ -166,6 +176,7 @@ export const videos: Video[] = [
     slug: "riutvocu",
     channel: {
       name: "Mart Anthony",
+      subscribers: "2M",
       profile_img:
         "https://yt3.googleusercontent.com/ytc/AIdro_nbVbd0SWK0vAJ3MTH-Q8A_JXKliSLyo4slcj9cJg=s900-c-k-c0x00ffffff-no-rj",
     },
@@ -182,6 +193,7 @@ export const videos: Video[] = [
     slug: "ifuvwbei",
     channel: {
       name: "Mart Anthony",
+      subscribers: "2M",
       profile_img:
         "https://yt3.googleusercontent.com/ytc/AIdro_nbVbd0SWK0vAJ3MTH-Q8A_JXKliSLyo4slcj9cJg=s900-c-k-c0x00ffffff-no-rj",
     },

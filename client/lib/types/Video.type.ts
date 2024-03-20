@@ -1,6 +1,7 @@
 export type Channel = {
   name: string;
   profile_img: string;
+  subscribers: string;
 };
 
 export type Video = {
