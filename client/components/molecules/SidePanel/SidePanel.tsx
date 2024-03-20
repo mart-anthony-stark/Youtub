@@ -30,27 +30,33 @@ import Text from "@/components/atoms/Text/Text";
 const channels: Channel[] = [
   {
     name: "Jocelyn Necio",
+    subscribers: "2M",
     profile_img: "https://avatars.githubusercontent.com/u/160461110?v=4.png",
   },
   {
     name: "Anthony Stark",
+    subscribers: "2M",
     profile_img:
       "https://github.com/mart-anthony-stark/CV-Vanilla-JS-SPA/blob/main/src/assets/images/mart-white-bg.png?raw=true",
   },
   {
     name: "Justin Viber",
+    subscribers: "2M",
     profile_img: "https://avatars.githubusercontent.com/u/83799855?v=4.png",
   },
   {
     name: "JR Siaboc",
+    subscribers: "2M",
     profile_img: "https://avatars.githubusercontent.com/u/160460651?v=4",
   },
   {
     name: "LeanNotFound",
+    subscribers: "2M",
     profile_img: "https://avatars.githubusercontent.com/u/113871679?v=4.png",
   },
   {
     name: "JepJep",
+    subscribers: "2M",
     profile_img: "https://avatars.githubusercontent.com/u/90635364?v=4",
   },
 ];
