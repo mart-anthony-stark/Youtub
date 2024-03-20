@@ -4,7 +4,7 @@ export const videos: Video[] = [
   {
     id: "1",
     channel: {
-      name: "Mart Anthony",
+      name: "The Net Ninja",
       profile_img:
         "https://yt3.googleusercontent.com/ytc/AIdro_nbVbd0SWK0vAJ3MTH-Q8A_JXKliSLyo4slcj9cJg=s900-c-k-c0x00ffffff-no-rj",
     },
@@ -23,7 +23,7 @@ export const videos: Video[] = [
         "https://yt3.googleusercontent.com/ytc/AIdro_nbVbd0SWK0vAJ3MTH-Q8A_JXKliSLyo4slcj9cJg=s900-c-k-c0x00ffffff-no-rj",
     },
     thumbnail:
-      "https://i.ytimg.com/vi/ZjAqacIC_3c/hq720.jpg?sqp=-oaymwEXCK4FEIIDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBc3blSmtVGX4TsNLvj385ak-6MxQ",
+      "https://i.ytimg.com/vi/NgDaPmxewcg/maxresdefault.jpg",
     title: "NextJS Tutorial",
     views: "3M",
     description: "description",
@@ -37,7 +37,7 @@ export const videos: Video[] = [
         "https://yt3.googleusercontent.com/ytc/AIdro_nbVbd0SWK0vAJ3MTH-Q8A_JXKliSLyo4slcj9cJg=s900-c-k-c0x00ffffff-no-rj",
     },
     thumbnail:
-      "https://i.ytimg.com/vi/ZjAqacIC_3c/hq720.jpg?sqp=-oaymwEXCK4FEIIDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBc3blSmtVGX4TsNLvj385ak-6MxQ",
+      "https://i.ytimg.com/vi/NgDaPmxewcg/maxresdefault.jpg",
     title: "NextJS Tutorial",
     views: "3M",
     description: "description",

@@ -16,10 +16,6 @@ const cat = [
   "AI",
   "Machine Learning",
   "JavaScript",
-  "TypeScript",
-  "Electronics",
-  "Physics",
-  "Thrillers"
 ];
 
 const CategoryList = ({
@@ -27,7 +23,7 @@ const CategoryList = ({
   active = "all",
 }: CategoryListProps) => {
   return (
-    <div className="flex gap-3 pb-3 overflow-hidden w-full sticky top-[60px] z-20 bg-white px-4">
+    <div className="flex gap-3 pb-3 overflow-hidden w-full fixed top-[60px] z-20 bg-white px-4 md:px-2 xl:px-8">
       {categories.map((category) => (
         <Button
           key={category}

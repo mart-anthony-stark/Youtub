@@ -10,13 +10,16 @@ const VideoCard = ({ details }: VideoCardProps) => {
   return (
     <div className="flex flex-col gap-2 cursor-pointer w-full">
       <div className="relative w-fit">
-        <Image
-          src={details.thumbnail}
-          className="rounded-xl min-w-[280px] w-full"
-          alt="image"
-          height={200}
-          width={350}
-        />
+        <div className="max-w-[600px] max-h-[400px] overflow-hidden">
+          <Image
+            src={details.thumbnail}
+            className="sm:rounded-xl min-w-[320px] sm:min-w-[200px] w-full h-auto object-contain"
+            alt="image"
+            width={600}
+            height={400}
+          />
+        </div>
+
         {details.duration && (
           <div className="bg-black bg-opacity-80 text-white absolute bottom-1 right-1 p-1 rounded-md text-xs">
             {Math.floor(details.duration / 60)}: {details.duration % 60}
