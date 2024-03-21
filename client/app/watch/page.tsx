@@ -15,16 +15,16 @@ const WatchVideo = () => {
     setData(video);
   };
   return (
-    <div className="grid lg:grid-cols-[1fr_400px] gap-4">
+    <div className="grid lg:grid-cols-[1fr_400px]">
       <div className="grid">
         <Suspense>
           <VideoPlayer onFetch={handleOnFetch} />
         </Suspense>
       </div>
 
-      <div className="hidden lg:block">
-        <CategoryList />
-        <div className="scroll pt-14 overflow-auto flex flex-col gap-4" style={{height: 'calc(100vh - 95px)'}}>
+      <div className="hidden lg:block fixed w-[400px] bg-yt-white right-0 top-[92px]">
+        <CategoryList className="sticky"/>
+        <div className="scroll overflow-auto flex flex-col gap-4" style={{height: 'calc(100vh - 95px)'}}>
           <FlatList
             data={videos.filter((video) => video.slug !== data.slug)}
             keyExtractor={(item) => item.id}

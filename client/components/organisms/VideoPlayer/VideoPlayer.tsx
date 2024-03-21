@@ -41,7 +41,7 @@ const VideoPlayer = ({ onFetch }: VideoPlayerProps) => {
           url={data?.path}
           controls={true}
           width="100%"
-          height="400px"
+          height="450px"
           light={false}
           pip={true}
         />

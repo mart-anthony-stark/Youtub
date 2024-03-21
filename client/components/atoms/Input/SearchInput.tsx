@@ -19,7 +19,8 @@ const SearchInput = ({
       placeholder={placeholder}
       value={value}
       onChange={(e) => onChange(e)}
-      className={`h-10 pl-5 pr-2 w-full rounded-l-full text-sm focus-within:outline-slate-400 border border-gray-400 mr-[1px] ${className}`}
+      className={`h-10 pl-5 pr-2 w-full rounded-l-full text-sm focus-within:border-blue-600 shadow-sm outline-none border border-gray-400 mr-[1px] ${className}`}
+      style={{boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.3)'}}
     />
   );
 };
