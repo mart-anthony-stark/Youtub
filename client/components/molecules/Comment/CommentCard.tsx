@@ -44,11 +44,11 @@ const CommentCard = ({
 
           <div className="flex flex-row items-center">
             <Button>
-              <BiLike className="hover:text-blue-700" />
+              <BiLike />
             </Button>
             <Text className="px-0 text-sm">{reacts}</Text>
             <Button>
-              <BiDislike className="hover:text-blue-700" />
+              <BiDislike />
             </Button>
             <div className="flex flex-row gap-2">
               <MenuButton
