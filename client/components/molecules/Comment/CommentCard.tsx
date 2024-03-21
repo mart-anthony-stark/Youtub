@@ -25,7 +25,7 @@ const CommentCard = ({
 }: CommentCardProps) => {
   return (
     <>
-      <div className="flex flex-row items-start justify-center gap-4">
+      <div className="flex flex-row items-start gap-4">
         <div className="w-auto h-auto">
           <Image
             src={"https://avatars.githubusercontent.com/u/160461110?v=4.png"}
@@ -44,11 +44,11 @@ const CommentCard = ({
 
           <div className="flex flex-row items-center">
             <Button>
-              <BiLike className="hover:text-blue-700" />
+              <BiLike />
             </Button>
             <Text className="px-0 text-sm">{reacts}</Text>
             <Button>
-              <BiDislike className="hover:text-blue-700" />
+              <BiDislike />
             </Button>
             <div className="flex flex-row gap-2">
               <MenuButton
