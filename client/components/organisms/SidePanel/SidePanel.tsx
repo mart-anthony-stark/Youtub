@@ -65,7 +65,7 @@ const SidePanel = () => {
   return (
     <>
       <div
-        className="hidden w-16 fixed top-[70px] left-0 z-50 scroll md:flex flex-col overflow-y-auto xl:w-60 px-2 bg-white"
+        className="hidden w-16 fixed top-[60px] pt-2 left-0 z-50 scroll md:flex flex-col overflow-y-auto xl:w-60 px-2 bg-white"
         style={{ height: "calc(100vh - 60px)" }}
       >
         <MenuButton text="Home" Icon={<GoHomeFill size={24} />} active />
