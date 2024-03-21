@@ -8,9 +8,10 @@ import { RiShareForwardLine } from "react-icons/ri";
 const VideoButtons = () => {
   return (
     <div className="flex gap-4 flex-wrap">
-      <div>
-        <Button className="rounded-r-none border">
+      <div className="flex">
+        <Button className="flex gap-1 rounded-r-none border">
           <BiLike size={26} />
+          17k
         </Button>
         <Button className="rounded-l-none border">
           <BiDislike size={26} />
