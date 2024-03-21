@@ -9,7 +9,8 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import ShortsHeading from "@/components/molecules/Headings/ShortsHeading";
 import ShortsList from "@/components/molecules/List/ShortsList";
 
-const Shorts = () => {
+type ShortsProps = { hasHeading?: boolean, className?: string };
+const Shorts = ({ hasHeading = true, className }: ShortsProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [items, setItems] = useState<Video[][]>([videos]);
 
@@ -24,8 +25,8 @@ const Shorts = () => {
   };
 
   return (
-    <div className="relative overflow-hidden w-[90vw] laptop:w-auto pl-4 xl:pl-8">
-      <ShortsHeading />
+    <div className={`relative overflow-hidden w-[90vw] laptop:w-auto pl-4 xl:pl-8 ${className}`}>
+      {hasHeading && <ShortsHeading />}
 
       {/* LIST */}
       {items ? <ShortsList items={items} /> : null}
