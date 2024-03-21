@@ -30,11 +30,10 @@ const MainTemplate = ({
               containerClassName ||
               `sm:px-6 flex flex-col flex-grow ${
                 hasSidePanel
-                  ? `pl-0 sm:px-2 md:pl-16 laptop:pl-0 xl:pl-60 flex flex-col flex-grow`
+                  ? `pl-0 sm:px-2 md:pl-16 laptop:pl-0 ${isOpen ? `xl:pl-60` : `xl:pl-10`} flex flex-col flex-grow`
                   : ""
               }`
             }`}
-            style={{paddingLeft: !isOpen ? '2px' : ''}}
           >
             {children}
           </div>
