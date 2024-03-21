@@ -2,7 +2,7 @@
 
 import Button from "@/components/atoms/Button/Button";
 import MenuButton from "@/components/atoms/Button/MenuButton";
-import React from "react";
+import React, { createContext, use, useContext } from "react";
 import { GoHomeFill } from "react-icons/go";
 import { SiYoutubeshorts } from "react-icons/si";
 import { MdOutlineSubscriptions } from "react-icons/md";
@@ -29,7 +29,11 @@ import { Channel } from "@/lib/types/Video.type";
 import FlatList from "@/components/atoms/List/FlatList";
 import Text from "@/components/atoms/Text/Text";
 import { SlArrowRight } from "react-icons/sl";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { SidepanelContext } from "@/components/templates/MainTemplate";
+import MiniSideBar from "@/components/molecules/Sidebar/MiniSideBar";
+
+const SidebarContext = createContext(null);
 
 const channels: Channel[] = [
   {
@@ -67,17 +71,22 @@ const channels: Channel[] = [
 
 const SidePanel = () => {
   const router = useRouter();
+  const pathName = usePathname();
+  let { isOpen } = useContext(SidepanelContext);
+
   return (
     <>
       <div
-        className="hidden w-16 fixed top-[60px] pt-2 left-0 z-50 scroll md:flex flex-col overflow-y-auto xl:w-60 px-2 bg-white"
+        className={`hidden w-16 fixed top-[60px] pt-2 left-0 z-50 scroll ${
+          isOpen && "md:flex"
+        } flex-col overflow-y-auto xl:w-60 px-2 bg-white`}
         style={{ height: "calc(100vh - 60px)" }}
       >
         <MenuButton
           onClick={() => router.push("/")}
           text="Home"
           Icon={<GoHomeFill size={24} />}
-          active
+          active={pathName === "/"}
         />
         <MenuButton
           text="Shorts"
@@ -92,7 +101,10 @@ const SidePanel = () => {
 
         <Button
           onClick={() => router.push("/channel/you")}
-          className="flex outline-none select-none rounded-md pl-3 font-bold px-8 gap-4 items-center justify-start"
+          className={`flex outline-none select-none rounded-md pl-3 font-bold px-8 gap-4 items-center justify-start ${
+            pathName === "/channel/you" &&
+            "bg-gray-200 text-black font-bold hover:bg-gray-300 hover:text-bold"
+          }`}
         >
           <p>You</p>
           <SlArrowRight size={12} />
@@ -219,35 +231,8 @@ const SidePanel = () => {
         </div>
         <p className="text-gray-400 pl-4 text-xs mt-1"> © 2024 Google LLC</p>
       </div>
-
-      <div
-        className="hidden w-16 fixed top-[60px] left-0 scroll md:flex flex-col overflow-y-auto overflow-x-hidden xl:hidden px-2 bg-white"
-        style={{ height: "calc(100vh - 60px)", zIndex: 99 }}
-      >
-        <div className="flex flex-col items-center">
-          <Button className="flex rounded-md flex-col items-center">
-            <GoHomeFill size={24} />
-            <Text size="xs">Home</Text>
-          </Button>
-        </div>
-        <div className="flex flex-col items-center">
-          <Button className="flex rounded-md flex-col items-center">
-            <SiYoutubeshorts size={24} color="red" />
-            <Text size="xs">Shorts</Text>
-          </Button>
-        </div>
-        <div className="flex flex-col items-center">
-          <Button className="flex rounded-md flex-col items-center">
-            <MdOutlineSubscriptions size={24} />
-            <Text size="xs">Subs</Text>
-          </Button>
-        </div>
-        <div className="flex flex-col items-center">
-          <Button className="flex rounded-md flex-col items-center">
-            <PiVideo size={24} />
-            <Text size="xs">You</Text>
-          </Button>
-        </div>
+      <div className="hidden md:block">
+        <MiniSideBar />
       </div>
     </>
   );

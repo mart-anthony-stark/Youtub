@@ -10,21 +10,19 @@ import { Video } from "@/lib/types/Video.type";
 import { Suspense, useState } from "react";
 
 const WatchVideo = () => {
-  const [data, setData] = useState(videos[0]);
+  const [data, setData] = useState<Video | null>(null);
 
   const handleOnFetch = (video: Video) => {
     setData(video);
   };
-  function item(item: any, index: number): string | number {
-    throw new Error("Function not implemented.");
-  }
+
 
   return (
     <div className="grid lg:grid-cols-[1fr_400px]">
       <div className="grid">
         <Suspense>
           <VideoPlayer onFetch={handleOnFetch} />
-          <div className="flex flex-col w-full mt-5">
+          <div className="flex flex-col w-full mt-5 px-2 sm:px-0">
             <FlatList
               data={videoComments}
               keyExtractor={(item) => item.id}
@@ -43,24 +41,26 @@ const WatchVideo = () => {
       </div>
 
       <div className="hidden lg:block fixed w-[400px] bg-yt-white right-0 top-[60px]">
-        <CategoryList className="sticky" />
-        <div
-          className="scroll overflow-auto flex flex-col gap-4 pb-8"
-          style={{ height: "calc(100vh - 95px)" }}
-        >
-          <FlatList
-            data={videos.filter((video) => video.slug !== data.slug)}
-            keyExtractor={(item) => item.id}
-            RenderItem={(video) => (
-              <VideoCard
-                details={video}
-                direction="row"
-                hasChannelIcon={false}
-                className="grid grid-cols-2 gap-4"
-              />
-            )}
-          />
-        </div>
+        <Suspense>
+          <CategoryList className="sticky" />
+          <div
+            className="scroll overflow-auto flex flex-col gap-4 pb-8"
+            style={{ height: "calc(100vh - 95px)" }}
+          >
+            <FlatList
+              data={videos.filter((video) => video.slug !== data?.slug)}
+              keyExtractor={(item) => item.id}
+              RenderItem={(video) => (
+                <VideoCard
+                  details={video}
+                  direction="row"
+                  hasChannelIcon={false}
+                  className="grid grid-cols-2 gap-4"
+                />
+              )}
+            />
+          </div>
+        </Suspense>
       </div>
     </div>
   );
