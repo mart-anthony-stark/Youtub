@@ -30,7 +30,7 @@ const CategoryList = ({
 }: CategoryListProps) => {
   return (
     <div
-      className={`flex gap-3 pb-3 overflow-x-auto w-full fixed z-20 bg-white ${className}`}
+      className={`flex gap-3 pb-3 overflow-x-auto scroll-hidden w-full fixed z-20 bg-white ${className}`}
     >
       {categories.map((category) => (
         <Button
