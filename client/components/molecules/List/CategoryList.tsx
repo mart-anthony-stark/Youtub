@@ -1,10 +1,12 @@
+"use client";
+
 import Button from "@/components/atoms/Button/Button";
-import React from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useCallback } from "react";
 import { IoIosArrowForward } from "react-icons/io";
 
 type CategoryListProps = {
   categories?: string[];
-  active?: string;
   className?: string;
 };
 
@@ -23,11 +25,29 @@ const cat = [
   "Pop Rock",
 ];
 
-const CategoryList = ({
-  categories = cat,
-  active = "all",
-  className,
-}: CategoryListProps) => {
+const CategoryList = ({ categories = cat, className }: CategoryListProps) => {
+  const searchParams = useSearchParams();
+  const router = useRouter()
+  const pathName = usePathname()
+  const active = searchParams.get("category");
+
+  const activeClassName =
+    "bg-yt-black text-white hover:bg-yt-black hover:text-white";
+
+  const createQueryString = useCallback(
+    (name: string, value: string) => {
+      const params = new URLSearchParams(searchParams.toString());
+      params.set(name, value);
+
+      return params.toString();
+    },
+    [searchParams]
+  );
+
+  const handleClick = (category: string) => {
+    router.push(pathName + '?' + createQueryString('category', category.toLowerCase()))
+  };
+
   return (
     <div
       className={`flex gap-3 pb-3 overflow-x-auto scroll-hidden w-full fixed z-20 bg-white ${className}`}
@@ -36,10 +56,12 @@ const CategoryList = ({
         <Button
           key={category}
           className={`${
-            active.toLowerCase() === category.toLowerCase()
-              ? "bg-yt-black text-white hover:bg-yt-black hover:text-white"
+            active?.toLowerCase() === category.toLowerCase() ||
+            (!active && category.toLowerCase() === "all")
+              ? activeClassName
               : "bg-gray-200"
           } rounded-md text-sm px-2 font-semibold w-fit text-nowrap whitespace-nowrap`}
+          onClick={() => handleClick(category)}
         >
           {category}
         </Button>

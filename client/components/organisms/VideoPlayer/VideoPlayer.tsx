@@ -9,13 +9,14 @@ import { Suspense, useEffect, useState } from "react";
 import ReactPlayer from "react-player";
 import ChannelInfo from "../../molecules/ChannelInfo/ChannelInfo";
 import VideoButtons from "../../molecules/VideoButtons/VideoButtons";
+import SpinningLoader from "@/components/atoms/Loader/SpinningLoader";
 
 type VideoPlayerProps = {
   onFetch?: (data: Video) => void;
 };
 
 const VideoPlayer = ({ onFetch }: VideoPlayerProps) => {
-  const [data, setData] = useState(videos[0]);
+  const [data, setData] = useState<Video | null>(null);
   const videoSlug = useSearchParams().get("v");
 
   useEffect(() => {
@@ -29,8 +30,16 @@ const VideoPlayer = ({ onFetch }: VideoPlayerProps) => {
     }
   }, [onFetch, videoSlug]);
 
+  const Loader = () => (
+    <div className="h-[450px] flex justify-center items-center">
+      <SpinningLoader />
+    </div>
+  );
+
+  if (!data) return <Loader />;
+
   return (
-    <Suspense>
+    <Suspense fallback={<Loader />}>
       <div className="flex flex-col">
         <ReactPlayer
           url={data?.path}
