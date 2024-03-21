@@ -14,7 +14,7 @@ const ChannelPage = ({ params }: ChannelPageProps) => {
     <MainTemplate hasSidePanel containerClassName="xl:pl-20">
       <Channel />
 
-      <div className="flex flex-col gap-2 py-4 pl-16 px-4 laptop:px-0">
+      <div className="flex flex-col gap-2 py-4 px-4 sm:px-0 laptop:px-0">
         <div className="flex justify-between items-center">
           <div className="flex gap-2 items-center">
             <GrHistory size={20} />
