@@ -1,4 +1,5 @@
 export type VideoComment = {
+  id: string | number;
   comment: string;
   handle: string;
   reacts: string;

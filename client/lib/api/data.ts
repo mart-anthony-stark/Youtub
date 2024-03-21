@@ -17,7 +17,7 @@ export const videos: Video[] = [
     views: "3M",
     description: "This is a description",
     duration: 190,
-    path: "https://www.youtube.com/watch?v=ZjAqacIC_3c&list=PLC3y8-rFHvwjOKd6gdf4QtV1uYNiQnruI"
+    path: "https://www.youtube.com/watch?v=ZjAqacIC_3c&list=PLC3y8-rFHvwjOKd6gdf4QtV1uYNiQnruI",
   },
   {
     id: "2",
@@ -33,7 +33,7 @@ export const videos: Video[] = [
     views: "3M",
     description: "This is a description",
     duration: 190,
-    path: "https://www.youtube.com/watch?v=ZjAqacIC_3c&list=PLC3y8-rFHvwjOKd6gdf4QtV1uYNiQnruI"
+    path: "https://www.youtube.com/watch?v=ZjAqacIC_3c&list=PLC3y8-rFHvwjOKd6gdf4QtV1uYNiQnruI",
   },
   {
     id: "3",
@@ -49,7 +49,7 @@ export const videos: Video[] = [
     views: "3M",
     description: "This is a description",
     duration: 190,
-    path: "https://www.youtube.com/watch?v=ZjAqacIC_3c&list=PLC3y8-rFHvwjOKd6gdf4QtV1uYNiQnruI"
+    path: "https://www.youtube.com/watch?v=ZjAqacIC_3c&list=PLC3y8-rFHvwjOKd6gdf4QtV1uYNiQnruI",
   },
   {
     id: "4",
@@ -66,7 +66,7 @@ export const videos: Video[] = [
     views: "3M",
     description: "This is a description",
     duration: 190,
-    path: "https://www.youtube.com/watch?v=ZjAqacIC_3c&list=PLC3y8-rFHvwjOKd6gdf4QtV1uYNiQnruI"
+    path: "https://www.youtube.com/watch?v=ZjAqacIC_3c&list=PLC3y8-rFHvwjOKd6gdf4QtV1uYNiQnruI",
   },
   {
     id: "5",
@@ -83,7 +83,7 @@ export const videos: Video[] = [
     views: "3M",
     description: "This is a description",
     duration: 190,
-    path: "https://www.youtube.com/watch?v=ZjAqacIC_3c&list=PLC3y8-rFHvwjOKd6gdf4QtV1uYNiQnruI"
+    path: "https://www.youtube.com/watch?v=ZjAqacIC_3c&list=PLC3y8-rFHvwjOKd6gdf4QtV1uYNiQnruI",
   },
   {
     id: "6",
@@ -100,7 +100,7 @@ export const videos: Video[] = [
     views: "3M",
     description: "This is a description",
     duration: 190,
-    path: "https://www.youtube.com/watch?v=ZjAqacIC_3c&list=PLC3y8-rFHvwjOKd6gdf4QtV1uYNiQnruI"
+    path: "https://www.youtube.com/watch?v=ZjAqacIC_3c&list=PLC3y8-rFHvwjOKd6gdf4QtV1uYNiQnruI",
   },
   {
     id: "7",
@@ -117,7 +117,7 @@ export const videos: Video[] = [
     views: "3M",
     description: "This is a description",
     duration: 190,
-    path: "https://www.youtube.com/watch?v=ZjAqacIC_3c&list=PLC3y8-rFHvwjOKd6gdf4QtV1uYNiQnruI"
+    path: "https://www.youtube.com/watch?v=ZjAqacIC_3c&list=PLC3y8-rFHvwjOKd6gdf4QtV1uYNiQnruI",
   },
   {
     id: "8",
@@ -134,7 +134,7 @@ export const videos: Video[] = [
     views: "3M",
     description: "This is a description",
     duration: 190,
-    path: "https://www.youtube.com/watch?v=ZjAqacIC_3c&list=PLC3y8-rFHvwjOKd6gdf4QtV1uYNiQnruI"
+    path: "https://www.youtube.com/watch?v=ZjAqacIC_3c&list=PLC3y8-rFHvwjOKd6gdf4QtV1uYNiQnruI",
   },
   {
     id: "9",
@@ -151,7 +151,7 @@ export const videos: Video[] = [
     views: "3M",
     description: "This is a description",
     duration: 190,
-    path: "https://www.youtube.com/watch?v=ZjAqacIC_3c&list=PLC3y8-rFHvwjOKd6gdf4QtV1uYNiQnruI"
+    path: "https://www.youtube.com/watch?v=ZjAqacIC_3c&list=PLC3y8-rFHvwjOKd6gdf4QtV1uYNiQnruI",
   },
   {
     id: "10",
@@ -168,7 +168,7 @@ export const videos: Video[] = [
     views: "3M",
     description: "This is a description",
     duration: 190,
-    path: "https://www.youtube.com/watch?v=ZjAqacIC_3c&list=PLC3y8-rFHvwjOKd6gdf4QtV1uYNiQnruI"
+    path: "https://www.youtube.com/watch?v=ZjAqacIC_3c&list=PLC3y8-rFHvwjOKd6gdf4QtV1uYNiQnruI",
   },
   {
     id: "11",
@@ -185,7 +185,7 @@ export const videos: Video[] = [
     views: "3M",
     description: "This is a description",
     duration: 190,
-    path: "https://www.youtube.com/watch?v=ZjAqacIC_3c&list=PLC3y8-rFHvwjOKd6gdf4QtV1uYNiQnruI"
+    path: "https://www.youtube.com/watch?v=ZjAqacIC_3c&list=PLC3y8-rFHvwjOKd6gdf4QtV1uYNiQnruI",
   },
   {
     id: "12",
@@ -202,12 +202,13 @@ export const videos: Video[] = [
     views: "3M",
     description: "This is a description",
     duration: 190,
-    path: "https://www.youtube.com/watch?v=ZjAqacIC_3c&list=PLC3y8-rFHvwjOKd6gdf4QtV1uYNiQnruI"
+    path: "https://www.youtube.com/watch?v=ZjAqacIC_3c&list=PLC3y8-rFHvwjOKd6gdf4QtV1uYNiQnruI",
   },
 ];
 
 export const videoComments: VideoComment[] = [
   {
+    id: "comment-1",
     comment: "Great video! Very informative.",
     handle: "JohnDoe123",
     reacts: "15",
@@ -215,6 +216,7 @@ export const videoComments: VideoComment[] = [
     dislikes: "3",
   },
   {
+    id: "comment-2",
     comment: "I didn't understand the last part, can you explain?",
     handle: "CuriousGeorge",
     reacts: "8",
@@ -222,6 +224,7 @@ export const videoComments: VideoComment[] = [
     dislikes: "2",
   },
   {
+    id: "comment-3",
     comment: "This video changed my perspective completely!",
     handle: "MindBlown",
     reacts: "25",
@@ -229,6 +232,7 @@ export const videoComments: VideoComment[] = [
     dislikes: "5",
   },
   {
+    id: "comment-4",
     comment: "I've been waiting for this tutorial, thank you!",
     handle: "CodeNinja",
     reacts: "12",

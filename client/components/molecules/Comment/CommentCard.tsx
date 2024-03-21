@@ -25,7 +25,7 @@ const CommentCard = ({
 }: CommentCardProps) => {
   return (
     <>
-      <div className="flex flex-row items-start justify-center gap-4">
+      <div className="flex flex-row items-start gap-4">
         <div className="w-auto h-auto">
           <Image
             src={"https://avatars.githubusercontent.com/u/160461110?v=4.png"}
