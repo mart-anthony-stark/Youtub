@@ -14,9 +14,8 @@ const ChannelPage = ({ params }: ChannelPageProps) => {
   return (
     <MainTemplate hasSidePanel>
       <Channel />
-      <hr className="flex flex-1 mt-9" />
 
-      <div className="flex flex-col gap-2 py-4 px-4 laptop:px-0">
+      <div className="flex flex-col gap-2 py-4 pl-16 px-4 laptop:px-0">
         <div className="flex justify-between items-center">
           <div className="flex gap-2 items-center">
             <GrHistory size={20} />
@@ -31,7 +30,7 @@ const ChannelPage = ({ params }: ChannelPageProps) => {
         </div>
 
         <div className="flex flex-col items-center gap-2">
-          <Shorts hasHeading={false} className="pl-0 xl:pl-0"/>
+          <Shorts hasHeading={false} className="pl-0 xl:pl-0" />
         </div>
       </div>
     </MainTemplate>
