@@ -11,7 +11,7 @@ const VideoButtons = () => {
       <div className="flex">
         <Button className="flex gap-1 rounded-r-none border">
           <BiLike size={26} />
-          17k
+          17K
         </Button>
         <Button className="rounded-l-none border">
           <BiDislike size={26} />
