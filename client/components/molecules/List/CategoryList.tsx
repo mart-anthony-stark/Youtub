@@ -1,10 +1,11 @@
 import Button from "@/components/atoms/Button/Button";
 import React from "react";
+import { IoIosArrowForward } from "react-icons/io";
 
 type CategoryListProps = {
   categories?: string[];
   active?: string;
-  className?: string
+  className?: string;
 };
 
 const cat = [
@@ -17,15 +18,20 @@ const cat = [
   "AI",
   "Machine Learning",
   "JavaScript",
+  "News",
+  "Visual",
+  "Pop Rock",
 ];
 
 const CategoryList = ({
   categories = cat,
   active = "all",
-  className
+  className,
 }: CategoryListProps) => {
   return (
-    <div className={`flex gap-3 pb-3 overflow-hidden w-full fixed z-20 bg-white ${className}`}>
+    <div
+      className={`flex gap-3 pb-3 overflow-x-auto w-full fixed z-20 bg-white ${className}`}
+    >
       {categories.map((category) => (
         <Button
           key={category}
@@ -38,6 +44,12 @@ const CategoryList = ({
           {category}
         </Button>
       ))}
+      <Button>
+        <IoIosArrowForward
+          size={18}
+          className="right-0 items-center my-auto justify-end"
+        />
+      </Button>
     </div>
   );
 };
