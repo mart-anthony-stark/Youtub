@@ -6,15 +6,14 @@ type TextProps = {
   weight?: string;
   className?: string;
 };
-const Text = ({ children, size, weight, className }: TextProps) => {
+const Text = ({
+  children,
+  size = "sm",
+  weight = "normal",
+  className,
+}: TextProps) => {
   return (
-    <p
-      className={`font-${weight ? weight : "normal"} text-${
-        size ? size : "sm"
-      } ${className}`}
-    >
-      {children}
-    </p>
+    <p className={`font-${weight} text-${size} ${className}`}>{children}</p>
   );
 };
 

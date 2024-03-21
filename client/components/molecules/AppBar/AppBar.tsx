@@ -22,7 +22,7 @@ const AppBar = () => {
       </div>
 
       {/* SEARCHBAR HERE */}
-      <div className="w-1/3 gap-4 hidden md:flex">
+      <div className="max-w-[600px] w-full gap-4 hidden md:flex px-4">
         <SearchBar />
 
         <Button className="bg-gray-200 self-center">

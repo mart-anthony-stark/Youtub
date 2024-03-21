@@ -5,14 +5,24 @@ type ButtonProps = {
   children?: ReactNode;
   className?: string;
   onClick?: () => void;
+  color?: string;
 };
 
-const Button = ({ children, className, onClick }: ButtonProps) => {
+type Theme = { [color: string]: string };
+
+const Button = ({
+  children,
+  className,
+  onClick,
+  color = "gray",
+}: ButtonProps) => {
+  const theme: Theme = {
+    gray: `hover:bg-gray-200 rounded-full cursor-pointer p-2 ${className}`,
+    black: `hover:bg-black bg-yt-black rounded-full text-white cursor-pointer p-2 ${className}`,
+  };
+
   return (
-    <button
-      onClick={onClick}
-      className={`hover:bg-gray-200 rounded-full cursor-pointer p-2 ${className}`}
-    >
+    <button onClick={onClick} className={theme[color]}>
       {children}
     </button>
   );
