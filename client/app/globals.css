@@ -20,3 +20,6 @@
 .scroll:hover::-webkit-scrollbar-thumb{
     @apply bg-gray-500/100;
 }
+.scroll-hidden::-webkit-scrollbar {
+    @apply w-0 hidden;
+}
