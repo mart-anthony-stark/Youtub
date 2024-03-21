@@ -1,3 +1,5 @@
+"use client"
+
 import Button from "@/components/atoms/Button/Button";
 import MenuButton from "@/components/atoms/Button/MenuButton";
 import React from "react";
@@ -26,6 +28,8 @@ import Image from "next/image";
 import { Channel } from "@/lib/types/Video.type";
 import FlatList from "@/components/atoms/List/FlatList";
 import Text from "@/components/atoms/Text/Text";
+import { SlArrowRight } from "react-icons/sl";
+import { useRouter } from "next/navigation";
 
 const channels: Channel[] = [
   {
@@ -35,7 +39,7 @@ const channels: Channel[] = [
   },
   {
     name: "Anthony Stark",
-    subscribers: "2M",
+    subscribers: "3K",
     profile_img:
       "https://github.com/mart-anthony-stark/CV-Vanilla-JS-SPA/blob/main/src/assets/images/mart-white-bg.png?raw=true",
   },
@@ -51,7 +55,7 @@ const channels: Channel[] = [
   },
   {
     name: "LeanNotFound",
-    subscribers: "2M",
+    subscribers: "2K",
     profile_img: "https://avatars.githubusercontent.com/u/113871679?v=4.png",
   },
   {
@@ -62,13 +66,14 @@ const channels: Channel[] = [
 ];
 
 const SidePanel = () => {
+  const router = useRouter()
   return (
     <>
       <div
         className="hidden w-16 fixed top-[60px] pt-2 left-0 z-50 scroll md:flex flex-col overflow-y-auto xl:w-60 px-2 bg-white"
         style={{ height: "calc(100vh - 60px)" }}
       >
-        <MenuButton text="Home" Icon={<GoHomeFill size={24} />} active />
+        <MenuButton onClick={() => router.push('/')} text="Home" Icon={<GoHomeFill size={24} />} active />
         <MenuButton
           text="Shorts"
           Icon={<SiYoutubeshorts size={24} color="red" />}
@@ -80,8 +85,12 @@ const SidePanel = () => {
 
         <hr className="mt-4" />
 
-        <Button className="flex outline-none select-none rounded-md pl-3 font-bold px-8 justify-start">
-          You
+        <Button
+          onClick={() => router.push("/channel/you")}
+          className="flex outline-none select-none rounded-md pl-3 font-bold px-8 gap-4 items-center justify-start"
+        >
+          <p>You</p>
+          <SlArrowRight size={12} />
         </Button>
 
         <MenuButton text="History" Icon={<GrHistory size={22} />} />

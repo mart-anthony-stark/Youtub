@@ -42,10 +42,10 @@ const WatchVideo = () => {
         </Suspense>
       </div>
 
-      <div className="hidden lg:block fixed w-[400px] bg-yt-white right-0 top-[92px]">
+      <div className="hidden lg:block fixed w-[400px] bg-yt-white right-0 top-[60px]">
         <CategoryList className="sticky" />
         <div
-          className="scroll overflow-auto flex flex-col gap-4"
+          className="scroll overflow-auto flex flex-col gap-4 pb-8"
           style={{ height: "calc(100vh - 95px)" }}
         >
           <FlatList
@@ -55,6 +55,7 @@ const WatchVideo = () => {
               <VideoCard
                 details={video}
                 direction="row"
+                hasChannelIcon={false}
                 className="grid grid-cols-2 gap-4"
               />
             )}

@@ -56,7 +56,14 @@ const VideoPlayer = ({ onFetch }: VideoPlayerProps) => {
 
             <VideoButtons />
           </div>
-          <Text>{data?.description}</Text>
+
+          <div className="bg-gray-100 p-3 rounded-lg">
+            <div className="flex gap-2">
+              <p className="font-bold text-sm">{data.views} views</p>
+              <p className="font-bold text-sm">2 years ago</p>
+            </div>
+            <Text>{data?.description}</Text>
+          </div>
         </div>
       </div>
     </Suspense>

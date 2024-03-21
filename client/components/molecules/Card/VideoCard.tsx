@@ -7,12 +7,14 @@ type VideoCardProps = {
   details: Video;
   direction?: "col" | "row";
   className?: string;
+  hasChannelIcon?: boolean;
 };
 
 const VideoCard = ({
   details,
   direction = "col",
   className,
+  hasChannelIcon = true,
 }: VideoCardProps) => {
   return (
     <Link href={`/watch?v=${details.slug}`}>
@@ -38,13 +40,15 @@ const VideoCard = ({
         </div>
 
         <div className="flex gap-4 items-start">
-          <Image
-            src={details.channel.profile_img}
-            className="bg-black rounded-full"
-            alt={details.title}
-            height={50}
-            width={50}
-          />
+          {hasChannelIcon ? (
+            <Image
+              src={details.channel.profile_img}
+              className="bg-black rounded-full"
+              alt={details.title}
+              height={50}
+              width={50}
+            />
+          ) : null}
 
           <div className="flex items-start flex-col">
             <h3 className="text-bold text-lg dark:text-white">
