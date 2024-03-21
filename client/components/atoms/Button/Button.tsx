@@ -17,8 +17,8 @@ const Button = ({
   color = "gray",
 }: ButtonProps) => {
   const theme: Theme = {
-    gray: `hover:bg-gray-200 rounded-full cursor-pointer p-2 ${className}`,
-    black: `hover:bg-black bg-yt-black rounded-full text-white cursor-pointer p-2 ${className}`,
+    gray: `hover:bg-gray-200 rounded-full cursor-pointer p-2 outline-none ${className}`,
+    black: `hover:bg-black bg-yt-black rounded-full text-white cursor-pointer p-2 outline-none ${className}`,
   };
 
   return (

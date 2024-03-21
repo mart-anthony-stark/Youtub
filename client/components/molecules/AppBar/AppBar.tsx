@@ -18,7 +18,6 @@ const AppBar = ({ setSidepanelOpen }: AppBarProps) => {
   const {isOpen} = useContext(SidepanelContext)
   const toggleSidePanel = () => {
     setSidepanelOpen((prev) => !prev)
-    console.log({isOpen})
   }
 
   return (

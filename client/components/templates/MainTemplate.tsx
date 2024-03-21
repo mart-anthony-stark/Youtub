@@ -10,7 +10,7 @@ type MainTemplateProps = {
   hasSidePanel?: boolean;
 };
 
-export const SidepanelContext = createContext({isOpen: true});
+export const SidepanelContext = createContext({ isOpen: true });
 
 const MainTemplate = ({
   children,
@@ -22,18 +22,17 @@ const MainTemplate = ({
   return (
     <SidepanelContext.Provider value={{ isOpen }}>
       <main className="flex min-h-screen bg-white dark:bg-yt-black flex-col">
-        <AppBar setSidepanelOpen={setIsOpen}/>
+        <AppBar setSidepanelOpen={setIsOpen} />
         <div>
           {hasSidePanel ? <SidePanel /> : null}
           <div
-            className={`${
-              containerClassName ||
-              `sm:px-6 flex flex-col flex-grow ${
-                hasSidePanel
-                  ? `pl-0 sm:px-2 md:pl-16 laptop:pl-0 ${isOpen ? `xl:pl-60` : `xl:pl-10`} flex flex-col flex-grow`
-                  : ""
-              }`
-            }`}
+            className={`${`sm:px-6 flex flex-col flex-grow ${
+              hasSidePanel
+                ? `pl-0 sm:px-2 md:pl-16 laptop:pl-0 ${
+                    isOpen ? `xl:pl-60` : `xl:pl-10`
+                  } flex flex-col flex-grow`
+                : ""
+            } ${containerClassName}`}`}
           >
             {children}
           </div>
