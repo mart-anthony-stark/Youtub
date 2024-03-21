@@ -8,11 +8,17 @@ type MenuButtonProps = {
   className?: string;
   onClick?: () => void;
 };
-const MenuButton = ({ active, text, Icon, className, onClick }: MenuButtonProps) => (
+const MenuButton = ({
+  active,
+  text,
+  Icon,
+  className,
+  onClick,
+}: MenuButtonProps) => (
   <Button
     className={`${
       active
-        ? "bg-gray-200 text-black font-bold hover:bg-gray-300 hover:text-bold"
+        ? "bg-gray-300 text-black font-bold hover:bg-gray-300 hover:text-bold"
         : "color-white "
     } select-none rounded-md text-sm text-nowrap grid grid-cols-[50px_1fr] pl-3 items-center justify-start w-full outline-none ${className}`}
     onClick={onClick}
