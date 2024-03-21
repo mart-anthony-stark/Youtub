@@ -25,7 +25,7 @@ const CommentCard = ({
 }: CommentCardProps) => {
   return (
     <>
-      <div className="flex flex-row items-start gap-4">
+      <div className="grid grid-cols-[40px_1fr] items-start gap-4">
         <div className="w-auto h-auto">
           <Image
             src={"https://avatars.githubusercontent.com/u/160461110?v=4.png"}
@@ -37,9 +37,9 @@ const CommentCard = ({
         </div>
         <div className="flex flex-col gap-0">
           <Text className="text-sm">{handle}</Text>
-          <div className="flex flex-row gap-2">
+          <div className="flex flex-row flex-wrap gap-2">
             <Text className="text-yt-black">{comment} </Text>
-            <Text className=" text-yt-gray">{"3 minutes ago "}</Text>
+            <Text className=" text-yt-gray">3 minutes ago</Text>
           </div>
 
           <div className="flex flex-row items-center">

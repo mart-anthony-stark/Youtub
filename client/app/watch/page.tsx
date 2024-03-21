@@ -22,7 +22,7 @@ const WatchVideo = () => {
       <div className="grid">
         <Suspense>
           <VideoPlayer onFetch={handleOnFetch} />
-          <div className="flex flex-col w-full mt-5">
+          <div className="flex flex-col w-full mt-5 px-2 sm:px-0">
             <FlatList
               data={videoComments}
               keyExtractor={(item) => item.id}
