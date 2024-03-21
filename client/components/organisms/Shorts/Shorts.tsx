@@ -25,7 +25,7 @@ const Shorts = ({ hasHeading = true, className }: ShortsProps) => {
   };
 
   return (
-    <div className={`relative overflow-hidden w-[90vw] laptop:w-auto pl-4 xl:pl-8 ${className}`}>
+    <div className={`relative overflow-hidden w-[90vw] laptop:w-auto ${className}`}>
       {hasHeading && <ShortsHeading />}
 
       {/* LIST */}

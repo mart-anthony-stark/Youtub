@@ -7,7 +7,7 @@ import { MdOutlineSwitchAccount } from "react-icons/md";
 
 const Channel = () => {
   return (
-    <div className="flex flex-row font-semibold items-center justify-start gap-4">
+    <div className="flex flex-row flex-wrap mt-4 font-semibold items-center justify-start gap-4 px-4 sm:px-0">
       <div className="flex flex-row">
         <div className="rounded-full overflow-hidden">
           <Image
@@ -19,14 +19,14 @@ const Channel = () => {
           />
         </div>
       </div>
-      <div className="flex flex-col">
+      <div className="flex flex-col flex-wrap">
         <h3 className="text-yt-black text-lg " />
         <h1 className="text-3xl">Mart Salazar</h1>
         <Text className="text-yt-gray cursor-pointer select-none">
           Create a channel
         </Text>
 
-        <div className="flex flex-row gap-3 pt-2">
+        <div className="flex flex-row gap-3 pt-2 flex-wrap">
           <Button className="flex flex-row bg-gray-50 gap-1">
             <MdOutlineSwitchAccount />
             <Text>Switch account</Text>

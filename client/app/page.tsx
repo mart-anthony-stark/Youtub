@@ -13,7 +13,7 @@ export default function Home() {
       </div>
       <div className="pt-12">
         <VideoList />
-        <Shorts />
+        <Shorts className="pl-4 sm:pl-2 lg:pl-2 xl:pl-8"/>
       </div>
     </MainTemplate>
   );

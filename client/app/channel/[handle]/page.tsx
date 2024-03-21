@@ -16,7 +16,7 @@ const ChannelPage = ({ params }: ChannelPageProps) => {
       <Channel />
       <hr className="flex flex-1 mt-9" />
 
-      <div className="flex flex-col gap-2 py-4">
+      <div className="flex flex-col gap-2 py-4 px-4 laptop:px-0">
         <div className="flex justify-between items-center">
           <div className="flex gap-2 items-center">
             <GrHistory size={20} />
