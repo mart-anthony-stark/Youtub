@@ -39,7 +39,7 @@ const VideoCard = ({
           )}
         </div>
 
-        <div className="flex gap-4 items-start">
+        <div className="flex gap-4 items-start pl-2 sm:pl-0">
           {hasChannelIcon ? (
             <Image
               src={details.channel.profile_img}
