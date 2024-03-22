@@ -1,6 +1,9 @@
+"use client";
+
+import SpinningLoader from "@/components/atoms/Loader/SpinningLoader";
 import { Video } from "@/lib/types/Video.type";
-import Image from "next/image";
-import Link from "next/link";
+import { Suspense } from "react";
+import ReactPlayer from "react-player";
 
 type ShortsChannelProps = {
   details: Video;
@@ -8,18 +11,20 @@ type ShortsChannelProps = {
 
 const ShortsChannel = ({ details }: ShortsChannelProps) => {
   return (
-    <Link href={`/watch?v=${details.slug}`}>
+    <Suspense fallback={<SpinningLoader />}>
       <div className="cursor-pointer">
-        <div className="relative rounded-3xl gap-3 items-center overflow-hidden h-[550px] w-[350px]">
-          <Image
-            src={details.thumbnail}
-            alt={details.title}
-            fill
-            className="bg-yt-black object-contain"
+        <div className="relative rounded-lg gap-3 items-center overflow-hidden h-[550px] max-w-[350px] w-full">
+          <ReactPlayer
+            url={details.path}
+            width="100%"
+            height="100%"
+            light={false}
+            pip={true}
+          
           />
         </div>
       </div>
-    </Link>
+    </Suspense>
   );
 };
 

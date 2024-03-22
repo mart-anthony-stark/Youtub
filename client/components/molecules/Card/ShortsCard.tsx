@@ -11,7 +11,7 @@ type VideoCardProps = {
 
 const ShortsCard = ({ details }: VideoCardProps) => {
   return (
-    <Link href={`/watch?v=${details.slug}`}>
+    <Link href={`/shorts/${details.slug}`}>
       <div className="cursor-pointer w-[200px]">
         <div className="relative rounded-lg overflow-hidden h-[350px] w-[200px]">
           <Image
