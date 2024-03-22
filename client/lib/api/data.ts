@@ -108,7 +108,7 @@ export const videos: Video[] = [
     description: `SIM swapping attacks are scary and it's where hackers can take control of your life within seconds. You might be wondering, "How is that even possible?" or "How can you protect yourself from this attack?" 
     Don't worry; we've got you covered.`,
     duration: 250,
-    path: "https://www.youtube.com/watch?v=ZjAqacIC_3c&list=PLC3y8-rFHvwjOKd6gdf4QtV1uYNiQnruI",
+    path: "https://www.youtube.com/watch?v=ddiAHZkOgYE",
   },
   {
     id: "7",
