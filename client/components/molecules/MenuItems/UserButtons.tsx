@@ -25,9 +25,21 @@ const UserButtons = () => {
         <SlArrowRight size={12} />
       </Button>
 
-      <MenuButton text="History" Icon={<GrHistory size={22} />} />
-      <MenuButton text="Watch later" Icon={<MdAccessTime size={24} />} />
-      <MenuButton text="Liked Videos" Icon={<BiLike size={24} />} />
+      <MenuButton
+        onClick={() => router.push("/channel/you")}
+        text="History"
+        Icon={<GrHistory size={22} />}
+      />
+      <MenuButton
+        onClick={() => router.push("/channel/you#watch-later")}
+        text="Watch later"
+        Icon={<MdAccessTime size={24} />}
+      />
+      <MenuButton
+        onClick={() => router.push("/channel/you#liked-videos")}
+        text="Liked Videos"
+        Icon={<BiLike size={24} />}
+      />
     </>
   );
 };
