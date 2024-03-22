@@ -56,6 +56,7 @@ const WatchVideo = () => {
                   direction="row"
                   hasChannelIcon={false}
                   className="grid grid-cols-2 gap-4"
+                  hasDuration={false}
                 />
               )}
             />

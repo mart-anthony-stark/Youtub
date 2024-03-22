@@ -6,7 +6,7 @@ type ShortsListProps = {
 };
 const ShortsList = ({ items }: ShortsListProps) => {
   return (
-    <div className="max-w-[1080px] w-full overflow-hidden">
+    <div className="w-full overflow-hidden">
       {items?.length !== 0 &&
         items?.map((videoGroup, index) => (
           <div
