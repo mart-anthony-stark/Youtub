@@ -8,6 +8,7 @@ type VideoCardProps = {
   direction?: "col" | "row";
   className?: string;
   hasChannelIcon?: boolean;
+  hasDuration?: boolean;
 };
 
 const VideoCard = ({
@@ -15,25 +16,26 @@ const VideoCard = ({
   direction = "col",
   className,
   hasChannelIcon = true,
+  hasDuration = true
 }: VideoCardProps) => {
   return (
     <Link href={`/watch?v=${details.slug}`}>
       <div
         className={`flex flex-${direction} gap-2 cursor-pointer w-full ${className}`}
       >
-        <div className="relative w-fit">
+        <div className={`relative w-${direction === "row" ? 'fit' : 'full'}`}>
           <div className="max-w-[600px] max-h-[400px] overflow-hidden">
             <Image
               src={details.thumbnail}
-              className="sm:rounded-xl min-w-[320px] sm:min-w-[200px] w-full h-auto object-contain"
+              className="sm:rounded-xl min-w-[300px] sm:min-w-[200px] w-[100vh] sm:w-full h-auto object-contain"
               alt="image"
               width={600}
               height={400}
             />
           </div>
 
-          {details.duration && (
-            <div className="bg-black bg-opacity-80 text-white absolute bottom-1 right-1 p-1 rounded-md text-xs">
+          {(details.duration && hasDuration) && (
+            <div className="4k:hidden bg-black bg-opacity-80 text-white absolute bottom-1 right-1 p-1 rounded-md text-xs">
               {Math.floor(details.duration / 60)}: {details.duration % 60}
             </div>
           )}
