@@ -7,31 +7,21 @@ import Button from "@/components/atoms/Button/Button";
 import ShortsChannel from "@/components/molecules/Card/ShortsChannel";
 import Text from "@/components/atoms/Text/Text";
 import Image from "next/image";
+import { videos } from "@/lib/api/data";
+import MainTemplate from "@/components/templates/MainTemplate";
+import { redirect } from "next/navigation";
 
 type ShortsComponentProps = {
-  params: { handle: string };
+  params: { short: string };
 };
 
 const ShortsComponent = ({ params }: ShortsComponentProps) => {
+  const video = videos.find((video) => video.slug === params.short);
+
   return (
-    <div className="flex flex-row justify-center items-center px-2">
-      <ShortsChannel
-        details={{
-          id: "",
-          slug: "",
-          title: "",
-          description: undefined,
-          channel: {
-            name: "",
-            profile_img: "",
-            subscribers: "",
-          },
-          duration: undefined,
-          views: "",
-          thumbnail: "",
-          path: "",
-        }}
-      />
+    <MainTemplate>
+      <div className="flex flex-row justify-center items-center px-2">
+      <ShortsChannel details={video!} />
       <div className="flex flex-col gap-4 rounded-full mt-4 ml-2">
         <div className="flex flex-col items-center">
           <Button className="bg-gray-200">
@@ -72,7 +62,8 @@ const ShortsComponent = ({ params }: ShortsComponentProps) => {
           />
         </div>
       </div>
-    </div>
+      </div>
+    </MainTemplate>
   );
 };
 
