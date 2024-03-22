@@ -57,7 +57,7 @@ const VideoPlayer = ({ onFetch }: VideoPlayerProps) => {
           </Text>
 
           <div className="flex justify-between flex-wrap gap-2">
-            <div className="flex w-full md:w-max gap-2 md:gap-8">
+            <div className="flex w-full md:w-max gap-2 md:gap-8 items-center">
               <ChannelInfo channel={data?.channel} />
 
               <Button

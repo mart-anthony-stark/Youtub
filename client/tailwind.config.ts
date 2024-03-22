@@ -24,6 +24,7 @@ const config: Config = {
       screens: {
         laptop: "1279px",
         tablet: "850px",
+        '4k': "2075px"
       },
     },
   },
