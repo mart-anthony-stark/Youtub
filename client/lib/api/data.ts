@@ -1,5 +1,5 @@
 import { VideoComment } from "../types/Comment.type";
-import { Video } from "../types/Video.type";
+import { Channel, Video } from "../types/Video.type";
 
 export const videos: Video[] = [
   {
@@ -108,7 +108,7 @@ export const videos: Video[] = [
     description: `SIM swapping attacks are scary and it's where hackers can take control of your life within seconds. You might be wondering, "How is that even possible?" or "How can you protect yourself from this attack?" 
     Don't worry; we've got you covered.`,
     duration: 250,
-    path: "https://www.youtube.com/watch?v=ZjAqacIC_3c&list=PLC3y8-rFHvwjOKd6gdf4QtV1uYNiQnruI",
+    path: "https://www.youtube.com/watch?v=ddiAHZkOgYE",
   },
   {
     id: "7",
@@ -252,5 +252,40 @@ export const videoComments: VideoComment[] = [
     reacts: "12",
     like: "10",
     dislikes: "2",
+  },
+];
+
+
+export const channels: Channel[] = [
+  {
+    name: "Jocelyn Necio",
+    subscribers: "2M",
+    profile_img: "https://avatars.githubusercontent.com/u/160461110?v=4.png",
+  },
+  {
+    name: "Anthony Stark",
+    subscribers: "3K",
+    profile_img:
+      "https://github.com/mart-anthony-stark/CV-Vanilla-JS-SPA/blob/main/src/assets/images/mart-white-bg.png?raw=true",
+  },
+  {
+    name: "Justin Viber",
+    subscribers: "2M",
+    profile_img: "https://avatars.githubusercontent.com/u/83799855?v=4.png",
+  },
+  {
+    name: "JR Siaboc",
+    subscribers: "2M",
+    profile_img: "https://avatars.githubusercontent.com/u/160460651?v=4",
+  },
+  {
+    name: "LeanNotFound",
+    subscribers: "2K",
+    profile_img: "https://avatars.githubusercontent.com/u/113871679?v=4.png",
+  },
+  {
+    name: "JepJep",
+    subscribers: "2M",
+    profile_img: "https://avatars.githubusercontent.com/u/90635364?v=4",
   },
 ];

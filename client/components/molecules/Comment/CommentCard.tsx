@@ -58,11 +58,11 @@ const CommentCard = ({
               />
             </div>
           </div>
-          <MenuButton
-            className="px-1 gap-0 pt-0 hover:bg-transparent"
-            text={"59 replies"}
-            Icon={<IoIosArrowDown />}
-          />
+          
+          <div className="flex gap-1 cursor-pointer p-1 pb-2 items-center">
+            <IoIosArrowDown />
+            <Text>2 replies</Text>
+          </div>
         </div>
       </div>
     </>

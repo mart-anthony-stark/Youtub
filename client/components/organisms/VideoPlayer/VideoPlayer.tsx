@@ -10,6 +10,7 @@ import ReactPlayer from "react-player";
 import ChannelInfo from "../../molecules/ChannelInfo/ChannelInfo";
 import VideoButtons from "../../molecules/VideoButtons/VideoButtons";
 import SpinningLoader from "@/components/atoms/Loader/SpinningLoader";
+import { IoIosArrowDown, IoIosNotificationsOutline } from "react-icons/io";
 
 type VideoPlayerProps = {
   onFetch?: (data: Video) => void;
@@ -17,6 +18,7 @@ type VideoPlayerProps = {
 
 const VideoPlayer = ({ onFetch }: VideoPlayerProps) => {
   const [data, setData] = useState<Video | null>(null);
+  const [isSubscribed, setIsSubscribed] = useState(false);
   const videoSlug = useSearchParams().get("v");
 
   useEffect(() => {
@@ -58,8 +60,14 @@ const VideoPlayer = ({ onFetch }: VideoPlayerProps) => {
             <div className="flex w-full md:w-max gap-2 md:gap-8">
               <ChannelInfo channel={data?.channel} />
 
-              <Button className="px-8" color="black">
-                Subscribe
+              <Button
+                onClick={() => setIsSubscribed(!isSubscribed)}
+                className={`${isSubscribed ? 'px-5':'px-8'} flex gap-2 items-center`}
+                color={isSubscribed ? `gray` : `black`}
+              >
+                {isSubscribed && <IoIosNotificationsOutline size={20}/>}
+                {isSubscribed ? "Subscribed" : "Subscribe"}
+                {isSubscribed && <IoIosArrowDown size={20}/>}
               </Button>
             </div>
 
