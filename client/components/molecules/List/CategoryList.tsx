@@ -23,12 +23,13 @@ const cat = [
   "News",
   "Visual",
   "Pop Rock",
+  "Rock",
 ];
 
 const CategoryList = ({ categories = cat, className }: CategoryListProps) => {
   const searchParams = useSearchParams();
-  const router = useRouter()
-  const pathName = usePathname()
+  const router = useRouter();
+  const pathName = usePathname();
   const active = searchParams.get("category");
 
   const activeClassName =
@@ -45,7 +46,9 @@ const CategoryList = ({ categories = cat, className }: CategoryListProps) => {
   );
 
   const handleClick = (category: string) => {
-    router.push(pathName + '?' + createQueryString('category', category.toLowerCase()))
+    router.push(
+      pathName + "?" + createQueryString("category", category.toLowerCase())
+    );
   };
 
   return (
@@ -66,12 +69,6 @@ const CategoryList = ({ categories = cat, className }: CategoryListProps) => {
           {category}
         </Button>
       ))}
-      <Button>
-        <IoIosArrowForward
-          size={18}
-          className="right-0 items-center my-auto justify-end"
-        />
-      </Button>
     </div>
   );
 };
