@@ -26,6 +26,13 @@ const config: Config = {
         tablet: "850px",
         '4k': "2075px"
       },
+      spacing: {
+        'view-screen': '60px'
+      },
+      height: {
+        'appbar': '60px',
+        'view-screen': 'calc(100vh - 60px)'
+      },
     },
   },
   plugins: [],

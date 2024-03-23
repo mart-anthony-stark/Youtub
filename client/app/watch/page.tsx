@@ -40,7 +40,7 @@ const WatchVideo = () => {
         </Suspense>
       </div>
 
-      <div className="hidden lg:block fixed w-[400px] bg-yt-white right-0 top-[60px]">
+      <div className="hidden lg:block fixed w-[400px] bg-yt-white right-0 top-view-screen">
         <Suspense>
           <CategoryList className="sticky" />
           <div
