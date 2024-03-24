@@ -16,7 +16,7 @@ const UserButtons = () => {
     <>
       <Button
         onClick={() => router.push("/channel/you")}
-        className={`flex outline-none select-none rounded-md pl-3 font-bold px-8 gap-4 items-center justify-start ${
+        className={`flex outline-none select-none rounded-md pl-3 font-bold px-8 gap-4 items-center justify-start w-full ${
           pathName === "/channel/you" &&
           "bg-gray-200 text-black font-bold hover:bg-gray-300 hover:text-bold"
         }`}

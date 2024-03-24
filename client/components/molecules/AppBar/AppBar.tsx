@@ -10,18 +10,18 @@ import Button from "../../atoms/Button/Button";
 import Logo from "../../atoms/Logo/Logo";
 import SearchBar from "../SearchBar/SearchBar";
 import { Dispatch, SetStateAction, useContext } from "react";
-import { SidepanelContext } from "@/components/templates/MainTemplate";
+import { SidepanelContext } from "@/contexts";
 
 type AppBarProps = { setSidepanelOpen: Dispatch<SetStateAction<boolean>> };
 
 const AppBar = ({ setSidepanelOpen }: AppBarProps) => {
-  const {isOpen} = useContext(SidepanelContext)
+  const { isOpen } = useContext(SidepanelContext);
   const toggleSidePanel = () => {
-    setSidepanelOpen((prev) => !prev)
-  }
+    setSidepanelOpen((prev) => !prev);
+  };
 
   return (
-    <nav className="h-[60px] bg-white sticky mt-0 top-0 z-50 flex justify-between items-center px-4 py-2 w-full">
+    <nav className="h-appbar bg-white sticky mt-0 top-0 z-30 flex justify-between items-center px-4 py-2 w-full">
       <div className="flex items-center gap-5">
         <Button onClick={toggleSidePanel} className="hidden sm:block">
           <VscMenu size={20} />
