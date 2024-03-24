@@ -2,20 +2,18 @@
 
 import { IoIosNotificationsOutline } from "react-icons/io";
 import { RiVideoAddLine } from "react-icons/ri";
-import Image from "next/image";
 import { GoSearch } from "react-icons/go";
 import { PiMicrophoneFill } from "react-icons/pi";
 import { VscMenu } from "react-icons/vsc";
 import Button from "../../atoms/Button/Button";
 import Logo from "../../atoms/Logo/Logo";
 import SearchBar from "../SearchBar/SearchBar";
-import { Dispatch, SetStateAction, useContext } from "react";
-import { SidepanelContext } from "@/contexts";
+import { Dispatch, SetStateAction, useState } from "react";
+import SettingPopup from "../SettingPopup/SettingPopup";
 
 type AppBarProps = { setSidepanelOpen: Dispatch<SetStateAction<boolean>> };
 
 const AppBar = ({ setSidepanelOpen }: AppBarProps) => {
-  const { isOpen } = useContext(SidepanelContext);
   const toggleSidePanel = () => {
     setSidepanelOpen((prev) => !prev);
   };
@@ -59,13 +57,7 @@ const AppBar = ({ setSidepanelOpen }: AppBarProps) => {
           />
         </Button>
 
-        <Image
-          src="https://yt3.ggpht.com/SKtlWY3vGARq6QT0jtCFRUzH2hNj7MKwA2mKPOitvXSZNlaODrPSDmo5mh_0grN8kgzhjco1=s88-c-k-c0x00ffffff-no-rj"
-          alt="user"
-          height={30}
-          width={30}
-          className="rounded-full mx-2"
-        />
+        <SettingPopup />
       </div>
     </nav>
   );
