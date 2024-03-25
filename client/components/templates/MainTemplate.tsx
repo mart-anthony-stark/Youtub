@@ -3,14 +3,14 @@
 import { ReactNode, createContext, useState } from "react";
 import AppBar from "../molecules/AppBar/AppBar";
 import SidePanel from "../organisms/SidePanel/SidePanel";
+import { SidepanelContext } from "@/contexts";
+import FloatingSidePanel from "../organisms/SidePanel/FloatingSidePanel";
 
 type MainTemplateProps = {
   children: ReactNode;
   containerClassName?: string;
   hasSidePanel?: boolean;
 };
-
-export const SidepanelContext = createContext({ isOpen: true });
 
 const MainTemplate = ({
   children,
@@ -25,6 +25,8 @@ const MainTemplate = ({
         <AppBar setSidepanelOpen={setIsOpen} />
         <div>
           {hasSidePanel ? <SidePanel /> : null}
+          <FloatingSidePanel toggleSidePanel={setIsOpen}/>
+
           <div
             className={`${`sm:px-6 flex flex-col flex-grow ${
               hasSidePanel
