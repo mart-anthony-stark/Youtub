@@ -7,9 +7,10 @@ import ReactPlayer from "react-player";
 
 type ShortsChannelProps = {
   details: Video;
+  onReady: ((player: ReactPlayer) => void) | undefined;
 };
 
-const ShortsChannel = ({ details }: ShortsChannelProps) => {
+const ShortsChannel = ({ details, onReady }: ShortsChannelProps) => {
   return (
     <Suspense fallback={<SpinningLoader />}>
       <div className="cursor-pointer">
@@ -20,7 +21,7 @@ const ShortsChannel = ({ details }: ShortsChannelProps) => {
             height="100%"
             light={false}
             pip={true}
-          
+            onReady={onReady}
           />
         </div>
       </div>
