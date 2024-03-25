@@ -1,4 +1,4 @@
-import React, { ElementType, ReactNode } from "react";
+import React, { ReactNode } from "react";
 import Button from "./Button";
 
 type MenuButtonProps = {
@@ -7,6 +7,7 @@ type MenuButtonProps = {
   Icon: ReactNode;
   className?: string;
   onClick?: () => void;
+  truncate?: boolean;
 };
 const MenuButton = ({
   active,
@@ -14,6 +15,7 @@ const MenuButton = ({
   Icon,
   className,
   onClick,
+  truncate = true,
 }: MenuButtonProps) => (
   <Button
     className={`${
@@ -24,7 +26,13 @@ const MenuButton = ({
     onClick={onClick}
   >
     {Icon}
-    <p className="w-28 text-start text-ellipsis overflow-hidden">{text}</p>
+    <p
+      className={`w-28 text-start ${
+        truncate && "text-ellipsis overflow-hidden"
+      }`}
+    >
+      {text}
+    </p>
   </Button>
 );
 

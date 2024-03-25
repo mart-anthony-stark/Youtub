@@ -18,9 +18,12 @@ type ShortsComponentProps = {
 const ShortsComponent = ({ params }: ShortsComponentProps) => {
   const video = videos.find((video) => video.slug === params.short);
 
+  if(!video) {
+    return redirect('/')
+  }
   return (
     <MainTemplate>
-      <div className="flex flex-row justify-center items-center px-2">
+      <div className="flex flex-row justify-center items-end px-2">
       <ShortsChannel details={video!} />
       <div className="flex flex-col gap-4 rounded-full mt-4 ml-2">
         <div className="flex flex-col items-center">
