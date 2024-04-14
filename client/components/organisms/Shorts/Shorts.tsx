@@ -1,6 +1,5 @@
 "use client";
 
-import { videos } from "@/lib/api/data";
 import { useEffect, useState } from "react";
 import { groupBy } from "@/lib/utils";
 import { Video } from "@/lib/types/Video.type";
@@ -10,12 +9,14 @@ import ShortsHeading from "@/components/atoms/Headings/ShortsHeading";
 import ShortsList from "@/components/molecules/List/ShortsList";
 
 type ShortsProps = {
+  videos: Video[]
   hasHeading?: boolean;
   className?: string;
   length?: number;
   hasMore?: boolean;
 };
 const Shorts = ({
+  videos,
   hasHeading = true,
   className,
   length,
@@ -30,7 +31,7 @@ const Shorts = ({
       : groupBy(videos, 6);
     const shownItems = isOpen ? result : [result[0]];
     setItems(shownItems);
-  }, [isOpen, length]);
+  }, [isOpen, length, videos]);
 
   const handleShowMore = () => {
     setIsOpen(!isOpen);
